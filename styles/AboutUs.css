@@ -1,0 +1,175 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  h2, h3, h4 {
+    color: #6b4b8c; /* Purple color for headers */
+  }
+  
+  p {
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .bg-gradient-to-br {
+    background: linear-gradient(135deg, #f0e6ff, #ffffff);
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Max Width Wrapper */
+  .max-w-6xl {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  
+  /* Header Section */
+  header h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+  }
+  
+  header p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+  }
+  
+  /* Our Story Section */
+  .our-story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: center;
+  }
+  
+  .our-story .text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+  
+  /* Override image styles */
+  .story-image-container {
+    width: 60px !important;
+    height: 40px !important;
+    overflow: hidden;
+  }
+  
+  .story-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+  
+  /* What We Do Section */
+  .what-we-do {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  
+  .what-we-do ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .what-we-do li {
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .what-we-do li:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Why Choose Us Section */
+  .why-choose-us {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  
+  .why-choose-us li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .why-choose-us li i {
+    font-size: 1.5rem;
+    color: #6b4b8c;
+  }
+  
+  /* Timeline Section */
+  .timeline {
+    position: relative;
+    border-left: 4px solid #6b4b8c;
+    padding-left: 24px;
+  }
+  
+  .timeline .item {
+    position: relative;
+    margin-bottom: 24px;
+  }
+  
+  .timeline .item:before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background-color: #6b4b8c;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .timeline h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .timeline p {
+    font-size: 1rem;
+  }
+  
+  /* Call to Action Section */
+  .call-to-action {
+    text-align: center;
+  }
+  
+  .call-to-action a {
+    background-color: #6b4b8c;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .call-to-action a:hover {
+    background-color: #5a3c76;
+  }
+  
