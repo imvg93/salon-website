@@ -2,7 +2,7 @@
 
 .pageContainer {
   min-height: 100vh;
-  background: linear-gradient(135deg,  #ffd700, #1c1c1c);
+  background: rgba(242, 5, 123, 0.329);
   color: #fff;
   font-family: 'Inter', sans-serif;
   display: flex;
@@ -37,8 +37,8 @@
 .homeButton {
   padding: 0.8rem 1.5rem;
   background: transparent;
-  color: #ffd700;
-  border: 2px solid #ffd700;
+  color: #0c0c0c;
+  border: 2px solid #050505;
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
@@ -55,7 +55,7 @@
 .bookingForm {
   width: 100%;
   max-width: 700px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(94, 13, 13, 0.023);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
   backdrop-filter: blur(10px);
@@ -68,8 +68,9 @@
   transform: scale(1.01);
 }
 
-.formHeader {
-  text-align: center;
+.formHeader h2 {
+  color: #000;
+  text-align: cente r;
   margin-bottom: 2rem;
 }
 
@@ -81,9 +82,10 @@
 }
 
 .formHeader p {
-  color: rgba(255, 255, 255, 0.75);
+  color:rgb(9, 9, 9);
   font-size: 1rem;
 }
+
 
 .formGrid {
   display: grid;
@@ -106,12 +108,12 @@
 .formGroup input,
 .formGroup select,
 .formGroup textarea {
-  background: rgba(152, 98, 135, 0.174);
-  border: 1px solid rgba(41, 245, 5, 0.685);
+  background: rgba(150, 47, 118, 0.174);
+  border: 1px solid rgba(4, 81, 85, 0.685);
   border-radius: 8px;
   padding: 0.75rem;
   font-size: 0.95rem;
-  color: #ffd700;
+  color: #141411;
   transition: border 0.2s ease, background 0.2s ease;
 }
 
@@ -138,8 +140,8 @@
   width: 100%;
   padding: 0.8rem 1.5rem;
   background: transparent;
-  color: #ffd700;
-  border: 2px solid #ffd700;
+  color: #090909;
+  border: 2px solid #0b0b0b;
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
@@ -173,4 +175,11 @@
 
 .formheader h2{
   color: pink;
+}
+.mentionName{
+  color: rgba(70, 84, 108, 0.953);
+}
+.salonName{
+  color: #050505;
+  font-style: italic;
 }

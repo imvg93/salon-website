@@ -73,7 +73,8 @@ const Appointments = () => {
   return (
     <div className={styles.pageContainer}>
       <div className={styles.header}>
-        <h1 className={styles.salonName}>Catwalk Salon</h1>
+        <h1 className={styles.salonName}><strong>Catwalk</strong> Hair and Beauty parlour </h1>
+       
         <Link href="/" className={styles.homeButton}>
           Back to Home
         </Link>

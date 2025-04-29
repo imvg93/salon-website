@@ -1,13 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import styles from "../styles/AboutUs.css";
 
 const timelineData = [
   { year: "2011", event: "Opened our very first salon." },
-  { year: "2014", event: "Launched advanced hair and beauty courses." },
-  { year: "2017", event: "Expanded to 2 new locations." },
+  { year: "2014", event: "Launched exclusive bridal and party makeover packages." },
+  { year: "2017", event: "Started selling curated beauty or haircare products." },
   { year: "2020", event: "Crossed 10,000 satisfied clients milestone." },
-  { year: "2023", event: "Introduced online learning for beauty students." },
+  { year: "2024", event: "Expanded to 2 new locations." },
+  { year: "2025", event: "Launched advanced hair and beauty courses." },
   { year: "Today", event: "Still growing with love, trust, and your continued support ❤️" },
 ];
 
@@ -18,9 +20,9 @@ const AboutUs = () => {
       {/* Home Button (Sticky Top Left) */}
       <div className="right-0">
         <Link href="/">
-          <div className="bg-purple-700 hover:bg-purple-800 text-white font-semibold px-4 py-2 rounded-full shadow-md transition duration-300">
-            Home
-          </div>
+          <button className="catwalk-button">
+            Catwalk
+          </button>
         </Link>
       </div>
 
@@ -32,7 +34,7 @@ const AboutUs = () => {
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">Empowering Beauty & Confidence Since 2011</p>
         </div>
 
-        {/* Our Story */}
+        {/* Our Story */} 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -111,29 +113,129 @@ const AboutUs = () => {
           <h3 className="text-2xl font-semibold text-purple-700">Our Journey</h3>
           <div className="relative border-l-4 border-purple-600 pl-6 space-y-6">
             {timelineData.map((item, index) => (
-              <div key={index} className="relative">
+              <motion.div 
+                key={index} 
+                className="relative"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
                 <div className="absolute -left-3 top-1 w-5 h-5 bg-purple-600 rounded-full border-4 border-white shadow"></div>
                 <h4 className="font-semibold text-lg text-gray-800">{item.year}</h4>
                 <p className="text-gray-700 text-base">{item.event}</p>
-              </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Image Gallery */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="space-y-6"
+        >
+          <h3 className="text-2xl font-semibold text-purple-700 text-center">Our Moments</h3>
+          <div className="gallery-grid">
+            {[1, 2, 3, 4].map((index) => (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+                className="gallery-item"
+              >
+                <img
+                  src={`/images/moment-${index}.jpg`}
+                  alt={`Gallery image ${index}`}
+                  className="gallery-image"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Testimonials */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="space-y-6"
+        >
+          <h3 className="text-2xl font-semibold text-purple-700 text-center">What Our Clients Say</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Charitha Sri",
+                text: "The best salon experience ever! Professional team and amazing results.",
+                image: "/images/testimonial-1.jpg"
+              },
+              {
+                name: "Sai Kavya",
+                text: "Their training program transformed my career. Highly recommended!",
+                image: "/images/testimonial-2.jpg"
+              },
+              {
+                name: "rahul",
+                text: "Love the attention to detail and personalized service.",
+                image: "/images/testimonial-3.jpg"
+              }
+            ].map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition"
+              >
+                <div className="flex items-center space-x-4 mb-4">
+                 
+                  <h4 className="font-semibold text-gray-800">{testimonial.name}</h4>
+                </div>
+                <p className="text-gray-600 italic">"{testimonial.text}"</p>
+              </motion.div>
             ))}
           </div>
         </motion.div>
 
         {/* Call to Action */}
-        <div className="text-center space-y-6">
-          <h3 className="text-2xl font-semibold text-purple-700">Ready to Transform?</h3>
-          <p className="text-gray-700 text-lg">Book your appointment or join our training programs to begin your beauty journey with us!</p>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center space-y-6 bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-3xl"
+        >
+          <h3 className="text-3xl font-semibold text-purple-700">Ready to Transform?</h3>
+          <p className="text-gray-700 text-lg max-w-2xl mx-auto">
+            Join thousands of satisfied clients who have experienced the Catwalk difference. 
+            Book your appointment or enroll in our training programs today!
+          </p>
 
-          {/* Book Now Button */}
-          <div className="flex justify-center">
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/appointments">
-              <div className="inline-block bg-purple-700 hover:bg-purple-800 text-white font-medium px-8 py-3 rounded-full shadow-md transition duration-300">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-block bg-purple-700 hover:bg-purple-800 text-white font-medium px-8 py-3 rounded-full shadow-md transition duration-300"
+              >
                 Book Now
-              </div>
+              </motion.div>
+            </Link>
+            <Link href="/training">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-block bg-white hover:bg-gray-50 text-purple-700 font-medium px-8 py-3 rounded-full shadow-md transition duration-300 border-2 border-purple-700"
+              >
+                Explore Training
+              </motion.div>
             </Link>
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>

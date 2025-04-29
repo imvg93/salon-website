@@ -12,8 +12,8 @@ export default function Navbar() {
           <li><a href="/" className={styles.navLink}>Home</a></li>
           <li><a href="/about-us" className={styles.navLink}>About</a></li>
           <li><a href="/services" className={styles.navLink}>Services</a></li>
-          <li><a href="/training" className={styles.navLink}>Training</a></li>
-          <li><a href="/contact" className={styles.navLink}>Contact</a></li>
+          <li><a href="/training" className={styles.navLink}>Training</a></li>     
+          <li><a href="/ContactFormt" className={styles.navLink}>Contact</a></li>          
           <li><Link href="/appointments" className={styles.navLink}>Book Appointment</Link></li>
 
 
