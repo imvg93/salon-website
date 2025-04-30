@@ -21,7 +21,7 @@ export default function Home() {
             <p className={styles.heroSubtitle}>Beauty salon & professional hair and makeup training in one destination.</p>
             <div className={styles.heroButtons}>
               <Link href="/services" className={styles.primaryButton}>
-                View Our Services
+                View Our 
               </Link>
               <Link href="/appointments" className={styles.secondaryButton}>
                 Book Now
