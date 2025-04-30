@@ -1,7 +1,7 @@
 // components/BookingForm.tsx
 "use client";
 
-import styles from './booked.module.css';
+import styles from '..styles/booked.module.css';
 import { useState } from "react";
 import { useRouter } from "next/router";
 
@@ -135,6 +135,6 @@ export default function BookingForm() {
         {isSubmitting ? "Booking..." : "Book Now"}
       </button>
 
-      {status && (
-        <p
-          className={`
+      {status && <p className={`text-center ${status.includes("success") ? styles.success : styles.error}`}>{status}</p>}
+    </form>
+  );

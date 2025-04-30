@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from '../styles/booked.module.css';
+import styles from '../styles/booked.module.css'; // Adjust the path as necessary
 import Notification from '../components/Notification';
 import Link from 'next/link';
 
