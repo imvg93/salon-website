@@ -2,95 +2,77 @@
 
 .pageContainer {
   min-height: 100vh;
-  background: rgb(252, 252, 251);
-  color: #fff;
-  font-family: 'Inter', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
   padding: 2rem;
 }
 
 .header {
-  width: 100%;
-  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
   margin-bottom: 2rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.1);
   backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .salonName {
   font-size: 2rem;
-  font-weight: 700;
-  color: #090909;
-  font-family: 'Playfair Display', serif;
+  color: #be185d;
   margin: 0;
+  font-weight: 600;
 }
 
 .homeButton {
-  padding: 0.8rem 1.5rem;
-  background: transparent;
-  color: #0c0c0c;
-  border: 2px solid #050505;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  padding: 0.75rem 1.5rem;
+  background: #be185d;
+  color: white;
+  border-radius: 12px;
   text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
 }
 
 .homeButton:hover {
-  background: #ffd700;
-  color: #000;
+  background: #9d174d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(190, 24, 93, 0.2);
 }
 
 .bookingForm {
-  width: 100%;
-  max-width: 700px;
-  background: rgba(94, 13, 13, 0.023);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
   border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
   backdrop-filter: blur(10px);
-  padding: 2rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
 }
 
-.bookingForm:hover {
-  transform: scale(1.01);
+.formHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 .formHeader h2 {
-  color: #000;
-  text-align: cente r;
-  margin-bottom: 2rem;
-}
-
-.bookingHeader h2 {
-  font-size: 2rem;
-  color: #ffd700 !important;
-  margin-bottom: 0.5rem;
-  font-family: 'Playfair Display', serif;
+  color: #be185d;
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
 }
 
 .formHeader p {
-  color:rgb(9, 9, 9);
-  font-size: 1rem;
+  color: #6b7280;
+  font-size: 1.1rem;
 }
-
 
 .formGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .formGroup {
@@ -99,60 +81,116 @@
 }
 
 .formGroup label {
+  color: #4b5563;
+  font-size: 0.95rem;
   margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  color: #0b0b0b;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .formGroup input,
 .formGroup select,
 .formGroup textarea {
-  background: rgba(248, 252, 248, 0.174);
-  border: 1px solid rgba(4, 81, 85, 0.685);
-  border-radius: 8px;
-  padding: 0.75rem;
-  font-size: 0.95rem;
-  color: #141411;
-  transition: border 0.2s ease, background 0.2s ease;
-}
-
-.formGroup input::placeholder,
-.formGroup textarea::placeholder {
-  color: rgb(11, 11, 11);
+  padding: 0.875rem;
+  border: 2px solid #f3f4f6;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #ffffff;
 }
 
 .formGroup input:focus,
 .formGroup select:focus,
 .formGroup textarea:focus {
   outline: none;
-  background: rgba(193, 30, 166, 0.893);
-  border-color: #ffd700;
-  color: #020202;
+  border-color: #be185d;
+  box-shadow: 0 0 0 3px rgba(190, 24, 93, 0.1);
 }
 
-.formGroup textarea {
-  min-height: 100px;
-  resize: vertical;
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: #9ca3af;
 }
 
 .submitButton {
   width: 100%;
-  padding: 0.8rem 1.5rem;
-  background: transparent;
-  color: #090909;
-  border: 2px solid #0b0b0b;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
+  padding: 1rem;
+  background: #be185d;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .submitButton:hover {
-  background: #ffd700;
-  color: #000;
+  background: #9d174d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(190, 24, 93, 0.2);
+}
+
+.submitButton:disabled {
+  background: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Notification Styles */
+.notification {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  color: white;
+  font-weight: 500;
+  animation: slideIn 0.3s ease-out;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.notification.success {
+  background: #10b981;
+}
+
+.notification.error {
+  background: #ef4444;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .bookingForm {
+    padding: 1.5rem;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .infoaddress p {
