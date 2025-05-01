@@ -5,7 +5,7 @@
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgb(245, 233, 3), rgba(237, 219, 17, 0.905)), url('/images/hero-bg.jpg');
+  background: linear-gradient(rgb(245, 233, 3), rgba(237, 219, 17, 0.905));
   background-size: cover;
   background-position: center;
   height: 80vh;

@@ -1,48 +1,77 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { FaStar } from 'react-icons/fa'
+import { FaStar, FaClock, FaUserGraduate, FaCertificate } from 'react-icons/fa'
+import Link from 'next/link'
 
 const courses = [
   {
     id: 1,
-    title: 'Elite Hair Styling Mastery',
-    image: '/images/courses/styling.jpg',
-    description: 'Learn the art of hair transformations—from sleek cuts to bridal updos—with tools and techniques used by top stylists.',
+    title: 'Professional Hair Styling',
+    image: '/images/Professional Hair Styling course training.jpg',
+    description: 'Master the art of hair styling with our comprehensive course covering cutting, coloring, and styling techniques.',
     duration: '3 Months',
-    level: 'All Levels',
-    features: ['Precision Hair Cutting', 'Advanced Coloring', 'Bridal & Editorial Styling', 'Client Psychology'],
-    price: '₹45,000'
+    level: 'Beginner to Advanced',
+    features: [
+      'Basic to Advanced Hair Cutting',
+      'Hair Coloring & Highlights',
+      'Hair Treatments & Care',
+      'Client Consultation Skills',
+      'Salon Management Basics'
+    ],
+    price: '₹25,000',
+    certification: 'Certified Hair Stylist'
   },
   {
     id: 2,
-    title: 'Luxury Makeup Artistry Pro',
-    image: '/images/courses/makeup.jpg',
-    description: 'Become a certified makeup artist and create glam, bridal, and high-fashion looks that turn heads.',
+    title: 'Professional Makeup Artistry',
+    image: '/images/Professional Makeup Artistry course training.jpg',
+    description: 'Learn professional makeup techniques for bridal, party, and special occasions with industry experts.',
     duration: '4 Months',
-    level: 'Intermediate to Advanced',
-    features: ['HD Bridal Makeup', 'Fashion & Editorial Looks', 'Airbrush Techniques', 'Skin Prep Mastery'],
-    price: '₹55,000'
+    level: 'All Levels',
+    features: [
+      'Bridal & Party Makeup',
+      'HD & Airbrush Makeup',
+      'Skin Preparation',
+      'Color Theory & Application',
+      'Client Management'
+    ],
+    price: '₹35,000',
+    certification: 'Certified Makeup Artist'
   },
   {
     id: 3,
-    title: 'Skin Science & Spa Therapy',
-    image: '/images/courses/skincare.jpg',
-    description: 'Unlock glowing skin secrets with professional skincare treatments, facials, and client care routines.',
+    title: 'Beauty Therapy & Facial',
+    image: '/images/Beauty Therapy & Facial course training.jpg',
+    description: 'Comprehensive training in facial treatments, skin care, and beauty therapy techniques.',
     duration: '2 Months',
     level: 'Beginner',
-    features: ['Facial Equipment Use', 'Chemical Peels', 'Skin Analysis Tools', 'Aromatherapy Basics'],
-    price: '₹35,000'
+    features: [
+      'Basic to Advanced Facials',
+      'Skin Analysis',
+      'Facial Equipment Usage',
+      'Product Knowledge',
+      'Client Care'
+    ],
+    price: '₹20,000',
+    certification: 'Certified Beauty Therapist'
   },
   {
     id: 4,
-    title: 'Creative Nail Art & Extensions',
-    image: '/images/courses/nails.jpg',
-    description: 'Design bold, beautiful nails using acrylics, gels, art stamping, and advanced extension methods.',
-    duration: '2 Months',
-    level: 'Beginner',
-    features: ['Acrylic & Gel Mastery', 'Nail Sculpting', 'Sanitation Protocols', 'Luxury Nail Design'],
-    price: '₹30,000'
+    title: 'Complete Beauty Course',
+    image: '/images/Complete Beauty Course training.jpg',
+    description: 'All-in-one course covering hair, makeup, and beauty therapy for a complete beauty career.',
+    duration: '6 Months',
+    level: 'All Levels',
+    features: [
+      'Hair Styling & Treatments',
+      'Professional Makeup',
+      'Beauty Therapy',
+      'Business Management',
+      'Client Relations'
+    ],
+    price: '₹50,000',
+    certification: 'Certified Beauty Professional'
   }
 ]
 
@@ -50,53 +79,88 @@ export default function Training() {
   const [selectedCourse, setSelectedCourse] = useState(null)
 
   return (
-    <main className="bg-white">
+    <main className="min-h-screen bg-[#FFF9F0]">
+      {/* Back Button */}
+      <div className="absolute top-4 left-4 z-10">
+        <Link href="/">
+          <button className="bg-[#D4AF37] text-white px-6 py-2 rounded-lg hover:bg-[#050505] transition shadow-md flex items-center gap-2">
+            
+            Catwalk
+          </button>
+        </Link>
+      </div>
+
       {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-br from-purple-100 via-purple-50 to-white">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl font-extrabold mb-6 text-purple-800"
-          >
-            Build a Glamorous Career in Beauty & Wellness
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg text-gray-700 mb-10"
-          >
-            Join our certified training programs led by industry professionals and open doors to a world of beauty success.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <button className="px-8 py-3 bg-purple-700 text-white font-semibold rounded-lg hover:bg-purple-800 transition">
-              View Courses
-            </button>
-            <button className="px-8 py-3 bg-white text-purple-700 font-semibold border border-purple-700 rounded-lg hover:bg-purple-100 transition">
-              Free Consultation
-            </button>
-          </motion.div>
+      <section className="relative h-[60vh] bg-gradient-to-r from-[#D4AF37] to-[#F5E6B3]">
+        <div className="absolute inset-0 bg-black/20" />
+        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+          <div className="text-[#2C1810]">
+            <Link href="/training" className="inline-block mb-6">
+              <h2 className="text-3xl font-bold text-[#2C1810] hover:text-[#29251a] transition-colors">
+                Catwalk Academy
+              </h2>
+            </Link>
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-5xl font-bold mb-4"
+            >
+              Professional Beauty Training
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-xl mb-8 max-w-2xl"
+            >
+              Transform your passion into a successful career with our expert-led courses
+            </motion.p>
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="bg-[#D4AF37] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#B38B1F] transition shadow-lg"
+            >
+              Explore Courses
+            </motion.button>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-6">
+              <FaUserGraduate className="w-12 h-12 text-[#D4AF37] mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2 text-[#2C1810]">Expert Instructors</h3>
+              <p className="text-[#5C4033]">Learn from industry professionals with years of experience</p>
+            </div>
+            <div className="text-center p-6">
+              <FaCertificate className="w-12 h-12 text-[#D4AF37] mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2 text-[#2C1810]">Certification</h3>
+              <p className="text-[#5C4033]">Get certified and recognized in the beauty industry</p>
+            </div>
+            <div className="text-center p-6">
+              <FaClock className="w-12 h-12 text-[#D4AF37] mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2 text-[#2C1810]">Flexible Schedule</h3>
+              <p className="text-[#5C4033]">Choose timings that work best for you</p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Courses Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-purple-800 mb-4">Professional Courses</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Carefully curated programs to transform you into a confident, certified beauty professional ready for salons, studios, or your own brand.
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-[#2C1810] mb-4">Our Courses</h2>
+            <p className="text-[#5C4033] max-w-2xl mx-auto">
+              Choose from our range of professional courses designed to kickstart your career in beauty
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {courses.map((course) => (
               <motion.div
                 key={course.id}
@@ -104,38 +168,40 @@ export default function Training() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition overflow-hidden"
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition border border-[#F5E6B3]"
               >
-                <div className="relative h-52">
+                <div className="relative h-64">
                   <Image
                     src={course.image}
                     alt={course.title}
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-t-2xl"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <div className="p-6">
-                  <div className="flex justify-between items-start mb-3">
-                    <h3 className="text-xl font-semibold text-gray-800">{course.title}</h3>
-                    <span className="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-xl font-bold text-[#2C1810]">{course.title}</h3>
+                    <span className="bg-[#FFF9F0] text-[#D4AF37] px-3 py-1 rounded-full text-sm border border-[#F5E6B3]">
                       {course.duration}
                     </span>
                   </div>
-                  <p className="text-gray-600 mb-4">{course.description}</p>
-                  <div className="space-y-1 mb-5">
+                  <p className="text-[#5C4033] mb-4">{course.description}</p>
+                  <div className="space-y-2 mb-6">
                     {course.features.map((feature, i) => (
-                      <div key={i} className="flex items-center text-sm text-gray-600">
-                        <FaStar className="text-yellow-500 mr-2" />
-                        {feature}
+                      <div key={i} className="flex items-center text-sm text-[#5C4033]">
+                        <FaStar className="text-[#D4AF37] mr-2 flex-shrink-0" />
+                        <span>{feature}</span>
                       </div>
                     ))}
                   </div>
-                  <div className="flex justify-between items-center border-t pt-4">
-                    <span className="text-xl font-bold text-purple-700">{course.price}</span>
+                  <div className="flex justify-between items-center border-t border-[#F5E6B3] pt-4">
+                    <div>
+                      <span className="text-2xl font-bold text-[#D4AF37]">{course.price}</span>
+                      <p className="text-sm text-[#5C4033]">{course.certification}</p>
+                    </div>
                     <button 
                       onClick={() => setSelectedCourse(course)}
-                      className="text-white bg-purple-700 px-4 py-2 rounded-lg hover:bg-purple-800 transition"
+                      className="bg-[#D4AF37] text-white px-6 py-2 rounded-lg hover:bg-[#B38B1F] transition shadow-md"
                     >
                       Learn More
                     </button>
@@ -153,37 +219,44 @@ export default function Training() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-white rounded-2xl max-w-2xl w-full p-6 shadow-xl"
+            className="bg-white rounded-xl max-w-2xl w-full p-6 shadow-xl border border-[#F5E6B3]"
           >
             <div className="flex justify-between items-start mb-6">
-              <h3 className="text-2xl font-bold text-purple-800">{selectedCourse.title}</h3>
+              <h3 className="text-2xl font-bold text-[#2C1810]">{selectedCourse.title}</h3>
               <button
                 onClick={() => setSelectedCourse(null)}
-                className="text-gray-500 hover:text-gray-700 text-xl"
+                className="text-[#5C4033] hover:text-[#2C1810]"
               >
                 ✕
               </button>
             </div>
-            <div className="space-y-5">
-              <div className="flex justify-between text-sm bg-purple-50 p-4 rounded-lg">
-                <span className="text-purple-700 font-medium">Duration: {selectedCourse.duration}</span>
-                <span className="text-purple-700 font-medium">Level: {selectedCourse.level}</span>
+            <div className="space-y-6">
+              <div className="flex gap-4 text-sm">
+                <div className="bg-[#FFF9F0] text-[#D4AF37] px-4 py-2 rounded-lg border border-[#F5E6B3]">
+                  Duration: {selectedCourse.duration}
+                </div>
+                <div className="bg-[#FFF9F0] text-[#D4AF37] px-4 py-2 rounded-lg border border-[#F5E6B3]">
+                  Level: {selectedCourse.level}
+                </div>
               </div>
-              <p className="text-gray-700">{selectedCourse.description}</p>
+              <p className="text-[#5C4033]">{selectedCourse.description}</p>
               <div>
-                <h4 className="font-semibold text-gray-800 mb-2">Course Features</h4>
+                <h4 className="font-semibold text-[#2C1810] mb-3">Course Features</h4>
                 <ul className="space-y-2">
                   {selectedCourse.features.map((feature, i) => (
-                    <li key={i} className="flex items-center text-gray-600">
-                      <FaStar className="text-yellow-500 mr-2" />
+                    <li key={i} className="flex items-center text-[#5C4033]">
+                      <FaStar className="text-[#D4AF37] mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="flex justify-between items-center border-t pt-4">
-                <span className="text-2xl font-bold text-purple-800">{selectedCourse.price}</span>
-                <button className="bg-purple-700 text-white px-6 py-2 rounded-lg hover:bg-purple-800 transition">
+              <div className="flex justify-between items-center border-t border-[#F5E6B3] pt-4">
+                <div>
+                  <span className="text-2xl font-bold text-[#D4AF37]">{selectedCourse.price}</span>
+                  <p className="text-sm text-[#5C4033]">{selectedCourse.certification}</p>
+                </div>
+                <button className="bg-[#D4AF37] text-white px-6 py-2 rounded-lg hover:bg-[#B38B1F] transition shadow-md">
                   Enroll Now
                 </button>
               </div>

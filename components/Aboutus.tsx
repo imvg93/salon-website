@@ -7,7 +7,7 @@ const timelineData = [
   { year: "2011", event: "Opened our very first salon." },
   { year: "2014", event: "Launched exclusive bridal and party makeover packages." },
   { year: "2017", event: "Started selling curated beauty or haircare products." },
-  { year: "2020", event: "Crossed 10,000 satisfied clients milestone." },
+  { year: "2020", event: "Crossed 20,000+ satisfied clients milestone." },
   { year: "2024", event: "Expanded to 2 new locations." },
   { year: "2025", event: "Launched advanced hair and beauty courses." },
   { year: "Today", event: "Still growing with love, trust, and your continued support ❤️" },
@@ -45,13 +45,13 @@ const AboutUs = () => {
           <div>
             <h3 className="text-2xl font-semibold text-purple-700 mb-4">Our Story</h3>
             <p className="text-gray-700 text-lg leading-relaxed">
-              Our journey began in 2011 with a small salon and a big dream — to make people feel confident, beautiful, and empowered.
+              Our journey began in 2011 with a salon and a big dream — to make people feel confident, beautiful, and empowered.
               Over the years, we've evolved into a full-service beauty destination and a trusted training center for aspiring beauticians.
             </p>
           </div>
           <div className="rounded-3xl overflow-hidden shadow-xl">
             <img
-              src="/images/our-story.jpg"
+              src="/images/ourjourney.jpg"
               alt="Our Story"
               className="w-full h-72 object-cover"
             />
@@ -111,7 +111,7 @@ const AboutUs = () => {
           className="space-y-6"
         >
           <h3 className="text-2xl font-semibold text-purple-700">Our Journey</h3>
-          <div className="relative border-l-4 border-purple-600 pl-6 space-y-6">
+          <div className="relative border-l-4 border-purple-600 pl-8 space-y-6">
             {timelineData.map((item, index) => (
               <motion.div 
                 key={index} 
@@ -121,7 +121,7 @@ const AboutUs = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="absolute -left-3 top-1 w-5 h-5 bg-purple-600 rounded-full border-4 border-white shadow"></div>
+                <div className="absolute -left-11 top-1 w-5 h-5 bg-purple-600 rounded-full border-4 border-white shadow"></div>
                 <h4 className="font-semibold text-lg text-gray-800">{item.year}</h4>
                 <p className="text-gray-700 text-base">{item.event}</p>
               </motion.div>

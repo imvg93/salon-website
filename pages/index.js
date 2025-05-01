@@ -1,12 +1,33 @@
 import Navbar from '../components/Navbar';
 import ContactForm from '../components/ContactForm';
+import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
+import Head from 'next/head';
+import Image from 'next/image';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Catwalk Academy - Beauty Training & Salon</title>
+        <meta name="description" content="Professional beauty training and salon services" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      {/* WhatsApp Floating Button */}
+      <a
+        href="https://wa.me/+919959673434?text=Hi%20book%20an%20appointment"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 z-50 flex items-center justify-center"
+        style={{ width: '60px', height: '60px' }}
+      >
+        <FaWhatsapp className="w-8 h-8" />
+      </a>
+
       <Navbar /> 
       <main className={styles.main}>
         {/* Hero Section */}
@@ -119,6 +140,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }
