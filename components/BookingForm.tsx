@@ -38,11 +38,33 @@ export default function BookingForm() {
   const router = useRouter();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    
+    // If gender is changed to male and branch is KPHB, automatically switch to Nizampet
+    if (name === 'gender' && value === 'male' && formData.branch === 'kphb') {
+      setFormData(prev => ({
+        ...prev,
+        [name]: value,
+        branch: 'nizampet'
+      }));
+      setStatus("KPHB branch is for ladies only. Branch automatically changed to Nizampet.");
+    } else {
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
+      }));
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Check if male customer is trying to book at KPHB branch
+    if (formData.gender === 'male' && formData.branch === 'kphb') {
+      setStatus("Sorry, KPHB branch is for ladies only. Please select Nizampet branch for booking.");
+      return;
+    }
+
     setIsSubmitting(true);
     setStatus("");
 
@@ -108,7 +130,7 @@ export default function BookingForm() {
             name="age"
             value={formData.age}
             onChange={handleChange}
-            placeholder="Age"
+            placeholder="Age(optional)"
             type="number"
             className="w-full p-3 border rounded focus:ring-2 focus:ring-black"
           />
@@ -135,13 +157,26 @@ export default function BookingForm() {
             name="branch"
             value={formData.branch}
             onChange={handleChange}
-            className="w-full p-3 border rounded focus:ring-2 focus:ring-black"
+            className={`w-full p-3 border rounded focus:ring-2 focus:ring-black ${
+              formData.gender === 'male' && formData.branch === 'kphb' ? 'border-red-500' : ''
+            }`}
             required
           >
             <option value="">Select Branch</option>
-            <option value="kphb">Catwalk Ladies Salon - KPHB</option>
+            <option 
+              value="kphb" 
+              disabled={formData.gender === 'male'}
+            >
+              Catwalk Ladies Salon - KPHB
+            </option>
             <option value="nizampet">Catwalk Unisex Salon - Nizampet</option>
           </select>
+
+          {formData.gender === 'male' && formData.branch === 'kphb' && (
+            <p className="text-red-500 text-sm col-span-2">
+              KPHB branch is for ladies only. Please select Nizampet branch for booking.
+            </p>
+          )}
 
           <select
             name="service"
@@ -157,6 +192,7 @@ export default function BookingForm() {
             <option value="makeup">Makeup</option>
             <option value="manicure">Manicure & Pedicure</option>
             <option value="spa">Spa Treatment</option>
+            <option value="package">Full Package</option>
             <option value="training">Training Program</option>
             <option value="not mentioned">not mentioned</option>
           </select>
@@ -292,8 +328,12 @@ export default function BookingForm() {
 
       <button
         type="submit"
-        className="w-full bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200 disabled:bg-gray-400"
-        disabled={isSubmitting}
+        className={`w-full px-6 py-3 rounded-lg transition-colors duration-200 ${
+          formData.gender === 'male' && formData.branch === 'kphb'
+            ? 'bg-gray-400 cursor-not-allowed'
+            : 'bg-black text-white hover:bg-gray-800'
+        }`}
+        disabled={isSubmitting || (formData.gender === 'male' && formData.branch === 'kphb')}
       >
         {isSubmitting ? "Booking..." : "Book Appointment"}
       </button>

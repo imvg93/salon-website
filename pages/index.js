@@ -1,5 +1,4 @@
 import Navbar from '../components/Navbar';
-import ContactForm from '../components/ContactForm';
 import Footer from '../components/footer';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -105,37 +104,6 @@ export default function Home() {
               <div className={styles.featureIcon}>🎓</div>
               <h3>Professional Training</h3>
               <p>Learn from the best in the industry.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className={styles.contactSection}>
-          <div className={styles.contactContent}>
-            <div className={styles.contactInfo}>
-              <h2 className={styles.sectionTitle}>Get in Touch</h2>
-              <p>Ready to transform your look? Contact us to schedule an appointment or learn more about our services.</p>
-              <div className={styles.contactDetails}>
-                <div className={styles.contactItem}>
-                  <span className={styles.contactIcon}>📞</span>
-                  <span>+91 99596 73434</span>
-                </div>
-                <div className={styles.contactItem}>
-                  <span className={styles.contactIcon}>📧</span>
-                  <span>info@catwalk.com</span>
-                </div>
-                <div className={styles.contactItem}>
-                  <span className={styles.contactIcon}>📍</span>
-                  <span>Catwalk Ladies Salon - JNTU to Hitech city road, Kukatpally</span>
-                </div>
-                <div className={styles.contactItem}>
-                  <span className={styles.contactIcon}>📍</span>
-                  <span>Catwalk Unisex Salon - Sreekrutha Sadan,Beside Hp petrol,Nizampet</span>
-                </div>
-              </div>
-            </div>
-            <div id="contact" className={styles.contactForm}>
-              <ContactForm />
             </div>
           </div>
         </section>

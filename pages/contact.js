@@ -78,7 +78,7 @@ export default function Contact() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative h-[40vh] bg-gradient-to-r from-[#D4AF37] to-[#2f1627]">
+      <section className="relative h-[40vh] bg-gradient-to-r from-[#D4AF37] to-[#4ad4fe]">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
           <div className="text-[#2C1810]">

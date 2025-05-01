@@ -6,9 +6,173 @@ import { motion } from 'framer-motion';
 import { FaArrowLeft } from 'react-icons/fa';
 
 const Services = () => {
-  const [activeTab, setActiveTab] = useState('hair');
+  const [activeTab, setActiveTab] = useState('packages');
+  const [hoveredCard, setHoveredCard] = useState(null);
 
   const services = {
+    packages: [
+      {
+        name: 'Bridal Package',
+        price: '₹25000 - ₹35000',
+        description: 'Complete bridal package for the perfect wedding look',
+        image: '/images/bridal-package.jpg',
+        duration: 'Full Day',
+        benefits: [
+          'Pre-bridal facial treatments (3 sessions)',
+          'Hair spa and treatment',
+          'Hair coloring and styling',
+          'Complete bridal makeup with trial',
+          'Manicure and pedicure',
+          'Free consultation',
+          'Complimentary touch-up kit'
+        ]
+      },
+      {
+        name: 'Party Package',
+        price: '₹5000 - ₹8000',
+        description: 'Complete party look package',
+        image: '/images/party-package.jpg',
+        duration: '3-4 hours',
+        benefits: [
+          'Hair styling',
+          'Party makeup',
+          'Manicure',
+          'Quick facial',
+          'Free touch-up kit'
+        ]
+      },
+      {
+        name: 'Hair Care Package',
+        price: '₹3000 - ₹5000',
+        description: 'Complete hair care and styling package',
+        image: '/images/hair-package.jpg',
+        duration: '2-3 hours',
+        benefits: [
+          'Hair spa',
+          'Haircut and styling',
+          'Hair treatment',
+          'Scalp massage',
+          'Free hair care products'
+        ]
+      },
+      {
+        name: 'Skin Care Package',
+        price: '₹4000 - ₹6000',
+        description: 'Complete skin care and facial package',
+        image: '/images/skin-package.jpg',
+        duration: '2-3 hours',
+        benefits: [
+          'Deep cleansing facial',
+          'Skin analysis',
+          'Face massage',
+          'LED therapy',
+          'Free skin care products'
+        ]
+      },
+      {
+        name: 'Complete Beauty Package',
+        price: '₹7000 - ₹10000',
+        description: 'Complete beauty and grooming package',
+        image: '/images/beauty-package.jpg',
+        duration: '4-5 hours',
+        benefits: [
+          'Haircut and styling',
+          'Facial treatment',
+          'Manicure and pedicure',
+          'Makeup',
+          'Free beauty consultation'
+        ]
+      },
+      {
+        name: 'Men\'s Grooming Package',
+        price: '₹2000 - ₹3500',
+        description: 'Complete grooming package for men',
+        image: '/images/mens-package.jpg',
+        duration: '2-3 hours',
+        benefits: [
+          'Haircut and styling',
+          'Face massage',
+          'Beard trim and styling',
+          'Manicure',
+          'Free styling products'
+        ]
+      }
+    ],
+    membership: [
+      {
+        name: 'Silver Membership',
+        price: '₹5000/year',
+        description: 'Basic membership with exclusive benefits',
+        image: '/images/silver-membership.jpg',
+        duration: '1 year',
+        benefits: [
+          '10% off on all services',
+          'Priority booking',
+          'Free birthday treatment',
+          'Monthly newsletter'
+        ]
+      },
+      {
+        name: 'Gold Membership',
+        price: '₹10000/year',
+        description: 'Premium membership with enhanced benefits',
+        image: '/images/gold-membership.jpg',
+        duration: '1 year',
+        benefits: [
+          '20% off on all services',
+          'Priority booking',
+          'Free birthday package',
+          'Quarterly free facial',
+          'Exclusive member events'
+        ]
+      },
+      {
+        name: 'Platinum Membership',
+        price: '₹20000/year',
+        description: 'Elite membership with maximum benefits',
+        image: '/images/platinum-membership.jpg',
+        duration: '1 year',
+        benefits: [
+          '30% off on all services',
+          'VIP priority booking',
+          'Monthly free treatment',
+          'Exclusive member events',
+          'Personal beauty consultant',
+          'Complimentary spa day'
+        ]
+      },
+      {
+        name: 'Diamond Membership',
+        price: '₹50000/year',
+        description: 'Ultimate luxury membership with exclusive VIP benefits',
+        image: '/images/diamond-membership.jpg',
+        duration: '1 year',
+        benefits: [
+          '40% off on all services',
+          '24/7 VIP booking',
+          'Monthly free premium treatment',
+          'Exclusive VIP events',
+          'Personal beauty consultant',
+          'Quarterly spa day',
+          'Free product samples',
+          'Priority access to new services'
+        ]
+      },
+      {
+        name: 'Student Membership',
+        price: '₹2000/year',
+        description: 'Special membership for students with exclusive benefits',
+        image: '/images/student-membership.jpg',
+        duration: '1 year',
+        benefits: [
+          '15% off on all services',
+          'Free basic haircut monthly',
+          'Student ID required',
+          'Special student events',
+          'Free beauty consultation'
+        ]
+      }
+    ],
     hair: [
       {
         name: 'Haircut & Styling',
@@ -29,6 +193,113 @@ const Services = () => {
         price: 'Pricing depends on Brand',
         description: 'Deep conditioning and repair treatments',
         image: '/images/hairtreatment.jpg',
+        duration: '1-1.5 hours'
+      },
+      {
+        name: 'Keratin Treatment',
+        price: '₹3000 - ₹8000',
+        description: 'Professional keratin treatment for smooth, frizz-free hair',
+        image: '/images/keratin.jpg',
+        duration: '2-3 hours'
+      },
+      {
+        name: 'Hair Spa',
+        price: '₹800 - ₹2000',
+        description: 'Relaxing hair spa with deep conditioning and scalp massage',
+        image: '/images/hairspa.jpg',
+        duration: '1-1.5 hours'
+      },
+      {
+        name: 'Hair Highlights',
+        price: '₹2000 - ₹4000',
+        description: 'Professional hair highlighting for a natural, sun-kissed look',
+        image: '/images/highlights.jpg',
+        duration: '2-2.5 hours'
+      },
+      {
+        name: 'Hair Botox',
+        price: '₹4000 - ₹7000',
+        description: 'Advanced hair botox treatment for deep repair and shine',
+        image: '/images/hairbotox.jpg',
+        duration: '2-2.5 hours'
+      },
+      {
+        name: 'Hair Rebonding',
+        price: '₹5000 - ₹10000',
+        description: 'Professional hair rebonding for straight, silky hair',
+        image: '/images/rebonding.jpg',
+        duration: '3-4 hours'
+      },
+      {
+        name: 'Hair Smoothening',
+        price: '₹3000 - ₹6000',
+        description: 'Advanced hair smoothening for frizz-free, manageable hair',
+        image: '/images/smoothening.jpg',
+        duration: '2-3 hours'
+      },
+      {
+        name: 'Hair Perming',
+        price: '₹4000 - ₹8000',
+        description: 'Professional hair perming for beautiful, natural-looking curls',
+        image: '/images/perm.jpg',
+        duration: '2.5-3.5 hours'
+      }
+    ],
+    nail: [
+      {
+        name: 'Manicure & Pedicure',
+        price: '₹500 - ₹1500',
+        description: 'Complete nail care including cuticle care, shaping, and polish',
+        image: '/images/manicure & pedicure service.jpg',
+        duration: '45-60 mins'
+      },
+      {
+        name: 'Gel Nail Art',
+        price: '₹800 - ₹2500',
+        description: 'Long-lasting gel polish with beautiful nail art designs',
+        image: '/images/gel nail art execellent service salon.jpg',
+        duration: '1-1.5 hours'
+      },
+      {
+        name: 'Nail Extension',
+        price: '₹1500 - ₹3000',
+        description: 'Professional nail extensions with acrylic or gel',
+        image: '/images/nail extensions execellent service salon.jpg',
+        duration: '1.5-2 hours'
+      },
+      {
+        name: 'Nail Art Design',
+        price: '₹500 - ₹1500',
+        description: 'Creative and trendy nail art designs by expert artists',
+        image: '/images/nailart.jpg',
+        duration: '1-1.5 hours'
+      },
+      {
+        name: 'Paraffin Treatment',
+        price: '₹800 - ₹1200',
+        description: 'Moisturizing paraffin treatment for soft, smooth hands and feet',
+        image: '/images/paraffin.jpg',
+        duration: '30-45 mins'
+      },
+      {
+        name: 'Acrylic Nails',
+        price: '₹2000 - ₹3500',
+        description: 'Professional acrylic nail extensions with custom designs',
+        image: '/images/acrylic.jpg',
+        duration: '2-2.5 hours'
+      },
+      {
+        name: 'SNS Dipping Powder',
+        price: '₹2500 - ₹4000',
+        description: 'Long-lasting SNS dipping powder nails with shine',
+        image: '/images/sns.jpg',
+        duration: '1.5-2 hours'
+      },
+      {
+        name: 'French Manicure',
+        price: '₹800 - ₹1500',
+        description: 'Classic French manicure with perfect white tips',
+        image: '/images/french.jpg',
         duration: '1-1.5 hours'
       }
     ],
@@ -53,6 +324,55 @@ const Services = () => {
         description: 'Special bridal facial package with premium products',
         image: '/images/bridal.jpg',
         duration: '2-2.5 hours'
+      },
+      {
+        name: 'Gold Facial',
+        price: '₹3000 - ₹5000',
+        description: 'Luxurious gold facial for radiant, glowing skin',
+        image: '/images/goldfacial.jpg',
+        duration: '1.5 hours'
+      },
+      {
+        name: 'Anti-Aging Facial',
+        price: '₹3500 - ₹6000',
+        description: 'Advanced anti-aging treatment with premium products',
+        image: '/images/antiaging.jpg',
+        duration: '1.5-2 hours'
+      },
+      {
+        name: 'Detox Facial',
+        price: '₹2000 - ₹3500',
+        description: 'Deep cleansing and detoxifying facial treatment',
+        image: '/images/detox.jpg',
+        duration: '1-1.5 hours'
+      },
+      {
+        name: 'Diamond Facial',
+        price: '₹5000 - ₹8000',
+        description: 'Premium diamond facial for ultimate skin rejuvenation',
+        image: '/images/diamondfacial.jpg',
+        duration: '2 hours'
+      },
+      {
+        name: 'Oxygen Facial',
+        price: '₹3000 - ₹5000',
+        description: 'Revitalizing oxygen facial for fresh, glowing skin',
+        image: '/images/oxygen.jpg',
+        duration: '1.5 hours'
+      },
+      {
+        name: 'LED Light Therapy',
+        price: '₹2500 - ₹4000',
+        description: 'Advanced LED light therapy for skin concerns',
+        image: '/images/led.jpg',
+        duration: '1 hour'
+      },
+      {
+        name: 'Hydrafacial',
+        price: '₹4000 - ₹6000',
+        description: 'Advanced hydrafacial treatment for deep hydration',
+        image: '/images/hydra.jpg',
+        duration: '1.5 hours'
       }
     ],
     makeup: [
@@ -76,6 +396,55 @@ const Services = () => {
         description: 'High-definition makeup for special occasions',
         image: '/images/hdm.jpg',
         duration: '1.5-2 hours'
+      },
+      {
+        name: 'Engagement Makeup',
+        price: '₹5000 - ₹8000',
+        description: 'Special engagement makeup with trial session',
+        image: '/images/engagement.jpg',
+        duration: '1.5-2 hours'
+      },
+      {
+        name: 'Character Makeup',
+        price: '₹2000 - ₹4000',
+        description: 'Creative character and theme-based makeup',
+        image: '/images/character.jpg',
+        duration: '1-2 hours'
+      },
+      {
+        name: 'Airbrush Makeup',
+        price: '₹4000 - ₹7000',
+        description: 'Flawless airbrush makeup for special occasions',
+        image: '/images/airbrush.jpg',
+        duration: '1.5-2 hours'
+      },
+      {
+        name: 'Mehendi Makeup',
+        price: '₹3000 - ₹5000',
+        description: 'Traditional mehendi ceremony makeup with trial',
+        image: '/images/mehendi.jpg',
+        duration: '1.5 hours'
+      },
+      {
+        name: 'Fashion Show Makeup',
+        price: '₹4000 - ₹7000',
+        description: 'Professional makeup for fashion shows and events',
+        image: '/images/fashion.jpg',
+        duration: '2 hours'
+      },
+      {
+        name: 'Photoshoot Makeup',
+        price: '₹3500 - ₹6000',
+        description: 'Camera-ready makeup for photoshoots',
+        image: '/images/photoshoot.jpg',
+        duration: '1.5-2 hours'
+      },
+      {
+        name: 'Glamour Makeup',
+        price: '₹5000 - ₹8000',
+        description: 'High-impact glamour makeup for special occasions',
+        image: '/images/glamour.jpg',
+        duration: '2 hours'
       }
     ],
     training: [
@@ -99,6 +468,55 @@ const Services = () => {
         description: 'Comprehensive beauty and styling course',
         image: '/images/completebhc.jpg',
         duration: '6 months'
+      },
+      {
+        name: 'Nail Art Course',
+        price: '₹20000',
+        description: 'Professional nail art and design techniques',
+        image: '/images/nailcourse.jpg',
+        duration: '2 months'
+      },
+      {
+        name: 'Spa Therapy Course',
+        price: '₹30000',
+        description: 'Comprehensive spa and massage therapy training',
+        image: '/images/spacourse.jpg',
+        duration: '3 months'
+      },
+      {
+        name: 'Bridal Makeup Course',
+        price: '₹40000',
+        description: 'Specialized bridal makeup and styling techniques',
+        image: '/images/bridalcourse.jpg',
+        duration: '3 months'
+      },
+      {
+        name: 'Hair Coloring Course',
+        price: '₹35000',
+        description: 'Professional hair coloring and treatment techniques',
+        image: '/images/colorcourse.jpg',
+        duration: '3 months'
+      },
+      {
+        name: 'Facial Therapy Course',
+        price: '₹25000',
+        description: 'Advanced facial treatments and skin care techniques',
+        image: '/images/facialcourse.jpg',
+        duration: '2 months'
+      },
+      {
+        name: 'Hair Styling Course',
+        price: '₹30000',
+        description: 'Professional hair styling and cutting techniques',
+        image: '/images/stylecourse.jpg',
+        duration: '3 months'
+      },
+      {
+        name: 'Beauty Therapy Diploma',
+        price: '₹75000',
+        description: 'Comprehensive beauty therapy and salon management',
+        image: '/images/diploma.jpg',
+        duration: '6 months'
       }
     ]
   };
@@ -121,10 +539,28 @@ const Services = () => {
 
       <div className={styles.tabs}>
         <button 
+          className={`${styles.tab} ${activeTab === 'packages' ? styles.active : ''}`}
+          onClick={() => setActiveTab('packages')}
+        >
+          Packages
+        </button>
+        <button 
+          className={`${styles.tab} ${activeTab === 'membership' ? styles.active : ''}`}
+          onClick={() => setActiveTab('membership')}
+        >
+          Membership
+        </button>
+        <button 
           className={`${styles.tab} ${activeTab === 'hair' ? styles.active : ''}`}
           onClick={() => setActiveTab('hair')}
         >
           Hair Services
+        </button>
+        <button 
+          className={`${styles.tab} ${activeTab === 'nail' ? styles.active : ''}`}
+          onClick={() => setActiveTab('nail')}
+        >
+          Nail Services
         </button>
         <button 
           className={`${styles.tab} ${activeTab === 'facial' ? styles.active : ''}`}
@@ -139,6 +575,7 @@ const Services = () => {
           Makeup Services
         </button>
         <button 
+          data-tab="training"
           className={`${styles.tab} ${activeTab === 'training' ? styles.active : ''}`}
           onClick={() => setActiveTab('training')}
         >
@@ -146,35 +583,71 @@ const Services = () => {
         </button>
       </div>
 
-      <div className={styles.servicesGrid}>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 max-w-6xl mx-auto">
         {services[activeTab].map((service, index) => (
-          <div key={index} className={styles.serviceCard}>
-            <div className={styles.imageContainer}>
+          <motion.div
+            key={index}
+            className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer flex flex-col h-[500px]"
+            whileHover={{ 
+              scale: 1.02,
+              boxShadow: "0 8px 20px rgba(0,0,0,0.1)"
+            }}
+            onHoverStart={() => setHoveredCard(index)}
+            onHoverEnd={() => setHoveredCard(null)}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="relative h-40 overflow-hidden">
               <Image
                 src={service.image}
                 alt={service.name}
-                width={400}
-                height={300}
-                className={styles.serviceImage}
+                fill
+                style={{ objectFit: 'cover' }}
+                className={`transition-transform duration-300 ${
+                  hoveredCard === index ? 'scale-110' : 'scale-100'
+                }`}
               />
             </div>
-            <div className={styles.serviceInfo}>
-              <h3>{service.name}</h3>
-              <p className={styles.price}>{service.price}</p>
-              <p className={styles.duration}>Duration: {service.duration}</p>
-              <p className={styles.description}>{service.description}</p>
-              <Link href="/appointments" className={styles.bookButton}>
-                Book Now
-              </Link>
+            <div className={`p-4 transition-all duration-300 flex flex-col flex-grow ${
+              hoveredCard === index ? 'bg-pink-50' : ''
+            }`}>
+              <div className="flex-grow">
+                <h3 className="text-lg font-semibold mb-1">{service.name}</h3>
+                <p className="text-base font-medium text-pink-600 mb-1">{service.price}</p>
+                <p className="text-sm text-gray-600 mb-1">Duration: {service.duration}</p>
+                <p className="text-sm text-gray-700 mb-3">{service.description}</p>
+                {(activeTab === 'membership' || activeTab === 'packages') && (
+                  <div className="mb-3">
+                    <h4 className="font-medium text-sm mb-1">Benefits:</h4>
+                    <ul className="list-disc list-inside space-y-0.5">
+                      {service.benefits.map((benefit, idx) => (
+                        <li key={idx} className="text-xs text-gray-600">{benefit}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+              <div className="mt-auto pt-4">
+                <Link 
+                  href="/appointments" 
+                  className={`inline-block w-full text-center px-4 py-2 bg-black text-white rounded-lg transition-all duration-300 text-sm ${
+                    hoveredCard === index ? 'bg-pink-600' : ''
+                  }`}
+                >
+                  {activeTab === 'membership' ? 'Join Now' : 'Book Now'}
+                </Link>
+              </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
 
-      <div className={styles.cta}>
-        <h2>Ready to Transform Your Look?</h2>
-        <p>Book your appointment today and experience the Catwalk difference</p>
-        <Link href="/appointments" className={styles.ctaButton}>
+      <div className="text-center py-8 bg-gray-50">
+        <h2 className="text-2xl font-bold mb-3">Ready to Transform Your Look?</h2>
+        <p className="text-gray-600 mb-4 text-sm">Book your appointment today and experience the Catwalk difference</p>
+        <Link 
+          href="/appointments" 
+          className="inline-block px-6 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors duration-300 text-sm"
+        >
           Book Your Appointment
         </Link>
       </div>

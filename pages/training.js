@@ -1,7 +1,8 @@
+import { useRouter } from 'next/router';
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { FaStar, FaClock, FaUserGraduate, FaCertificate } from 'react-icons/fa'
+import { FaStar, FaClock, FaUserGraduate, FaCertificate, FaArrowLeft } from 'react-icons/fa'
 import Link from 'next/link'
 
 const courses = [
@@ -77,6 +78,11 @@ const courses = [
 
 export default function Training() {
   const [selectedCourse, setSelectedCourse] = useState(null)
+  const router = useRouter()
+
+  const handleExploreCourses = () => {
+    router.push('/services')
+  }
 
   return (
     <main className="min-h-screen bg-[#FFF9F0]">
@@ -119,6 +125,7 @@ export default function Training() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
+              onClick={handleExploreCourses}
               className="bg-[#D4AF37] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#B38B1F] transition shadow-lg"
             >
               Explore Courses

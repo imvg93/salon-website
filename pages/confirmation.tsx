@@ -42,10 +42,10 @@ export default function ConfirmationPage() {
           {/* Personal Information */}
           <div className="space-y-4">
             <h3 className="text-xl font-semibold border-b pb-2">Personal Information</h3>
-            <div className="space-y-2">
-              <p><strong>Name:</strong> {appointmentDetails.name}</p>
-              <p><strong>Email:</strong> {appointmentDetails.email}</p>
-              <p><strong>Phone:</strong> {appointmentDetails.phone}</p>
+        <div className="space-y-2">
+          <p><strong>Name:</strong> {appointmentDetails.name}</p>
+          <p><strong>Email:</strong> {appointmentDetails.email}</p>
+          <p><strong>Phone:</strong> {appointmentDetails.phone}</p>
               {appointmentDetails.age && <p><strong>Age:</strong> {appointmentDetails.age}</p>}
               {appointmentDetails.gender && <p><strong>Gender:</strong> {appointmentDetails.gender}</p>}
             </div>
@@ -56,7 +56,7 @@ export default function ConfirmationPage() {
             <h3 className="text-xl font-semibold border-b pb-2">Appointment Details</h3>
             <div className="space-y-2">
               <p><strong>Branch:</strong> {appointmentDetails.branch === 'kphb' ? 'Catwalk Ladies Salon - KPHB' : 'Catwalk Unisex Salon - Nizampet'}</p>
-              <p><strong>Service:</strong> {appointmentDetails.service}</p>
+          <p><strong>Service:</strong> {appointmentDetails.service}</p>
               {appointmentDetails.subService && <p><strong>Specific Service:</strong> {appointmentDetails.subService}</p>}
               <p><strong>Date:</strong> {formattedDate}</p>
               <p><strong>Time:</strong> {formattedTime}</p>
