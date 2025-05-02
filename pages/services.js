@@ -15,7 +15,7 @@ const Services = () => {
         name: 'Bridal Package',
         price: '₹25000 - ₹35000',
         description: 'Complete bridal package for the perfect wedding look',
-        image: '/images/bridal-package.jpg',
+        image: '/images/services/bridal package salon image to see clients.jpg',
         duration: 'Full Day',
         benefits: [
           'Pre-bridal facial treatments (3 sessions)',
@@ -31,7 +31,7 @@ const Services = () => {
         name: 'Party Package',
         price: '₹5000 - ₹8000',
         description: 'Complete party look package',
-        image: '/images/party-package.jpg',
+        image: '/images/services/party package salon .jpg',
         duration: '3-4 hours',
         benefits: [
           'Hair styling',
@@ -45,7 +45,7 @@ const Services = () => {
         name: 'Hair Care Package',
         price: '₹3000 - ₹5000',
         description: 'Complete hair care and styling package',
-        image: '/images/hair-package.jpg',
+        image: '/images/services/e538d28e-f45b-46a1-b3b6-a52f627595c1.jpeg',
         duration: '2-3 hours',
         benefits: [
           'Hair spa',
@@ -59,7 +59,7 @@ const Services = () => {
         name: 'Skin Care Package',
         price: '₹4000 - ₹6000',
         description: 'Complete skin care and facial package',
-        image: '/images/skin-package.jpg',
+        image: '/images/services/skin care package for salon in services doing.jpg',
         duration: '2-3 hours',
         benefits: [
           'Deep cleansing facial',
@@ -73,7 +73,7 @@ const Services = () => {
         name: 'Complete Beauty Package',
         price: '₹7000 - ₹10000',
         description: 'Complete beauty and grooming package',
-        image: '/images/beauty-package.jpg',
+        image: '/images/services/Complete Beauty Package for salon in services.jpg',
         duration: '4-5 hours',
         benefits: [
           'Haircut and styling',
@@ -87,7 +87,7 @@ const Services = () => {
         name: 'Men\'s Grooming Package',
         price: '₹2000 - ₹3500',
         description: 'Complete grooming package for men',
-        image: '/images/mens-package.jpg',
+        image: '/images/services/Mens Grooming Package for salon in services.jpg',
         duration: '2-3 hours',
         benefits: [
           'Haircut and styling',
@@ -100,10 +100,10 @@ const Services = () => {
     ],
     membership: [
       {
-        name: 'Silver Membership',
+        name: 'silver membership',
         price: '₹5000/year',
         description: 'Basic membership with exclusive benefits',
-        image: '/images/silver-membership.jpg',
+        image: '/images/services/Silver Membership for salon in services.jpg',
         duration: '1 year',
         benefits: [
           '10% off on all services',
@@ -116,7 +116,7 @@ const Services = () => {
         name: 'Gold Membership',
         price: '₹10000/year',
         description: 'Premium membership with enhanced benefits',
-        image: '/images/gold-membership.jpg',
+        image: '/images/services/Gold Membership for salon in services.jpg',
         duration: '1 year',
         benefits: [
           '20% off on all services',
@@ -130,7 +130,7 @@ const Services = () => {
         name: 'Platinum Membership',
         price: '₹20000/year',
         description: 'Elite membership with maximum benefits',
-        image: '/images/platinum-membership.jpg',
+        image: '/images/services/Platinum Membership for salon in services.jpg',
         duration: '1 year',
         benefits: [
           '30% off on all services',
@@ -145,7 +145,7 @@ const Services = () => {
         name: 'Diamond Membership',
         price: '₹50000/year',
         description: 'Ultimate luxury membership with exclusive VIP benefits',
-        image: '/images/diamond-membership.jpg',
+        image: '/images/services/Diamond Membership for salon in services.jpg',
         duration: '1 year',
         benefits: [
           '40% off on all services',
@@ -162,7 +162,7 @@ const Services = () => {
         name: 'Student Membership',
         price: '₹2000/year',
         description: 'Special membership for students with exclusive benefits',
-        image: '/images/student-membership.jpg',
+        image: '/images/services/Student Membership for salon in services.jpg',
         duration: '1 year',
         benefits: [
           '15% off on all services',
@@ -199,49 +199,49 @@ const Services = () => {
         name: 'Keratin Treatment',
         price: '₹3000 - ₹8000',
         description: 'Professional keratin treatment for smooth, frizz-free hair',
-        image: '/images/keratin.jpg',
+        image: '/images/services/Keratin Treatment for salon in services doing.jpg',
         duration: '2-3 hours'
       },
       {
         name: 'Hair Spa',
         price: '₹800 - ₹2000',
         description: 'Relaxing hair spa with deep conditioning and scalp massage',
-        image: '/images/hairspa.jpg',
+        image: '/images/services/Hair Spa for salon in services doing.jpg',
         duration: '1-1.5 hours'
       },
       {
         name: 'Hair Highlights',
         price: '₹2000 - ₹4000',
         description: 'Professional hair highlighting for a natural, sun-kissed look',
-        image: '/images/highlights.jpg',
+        image: '/images/services/Hair Highlights for salon in services doing.jpg',
         duration: '2-2.5 hours'
       },
       {
         name: 'Hair Botox',
         price: '₹4000 - ₹7000',
         description: 'Advanced hair botox treatment for deep repair and shine',
-        image: '/images/hairbotox.jpg',
+        image: '/images/services/Hair Botox for salon in services doing.jpg',
         duration: '2-2.5 hours'
       },
       {
         name: 'Hair Rebonding',
         price: '₹5000 - ₹10000',
         description: 'Professional hair rebonding for straight, silky hair',
-        image: '/images/rebonding.jpg',
+        image: '/images/services/Hair Rebonding for salon in services doing.jpg',
         duration: '3-4 hours'
       },
       {
         name: 'Hair Smoothening',
         price: '₹3000 - ₹6000',
         description: 'Advanced hair smoothening for frizz-free, manageable hair',
-        image: '/images/smoothening.jpg',
+        image: '/images/services/Hair Smoothening for salon in services doing.jpg',
         duration: '2-3 hours'
       },
       {
         name: 'Hair Perming',
         price: '₹4000 - ₹8000',
         description: 'Professional hair perming for beautiful, natural-looking curls',
-        image: '/images/perm.jpg',
+        image: '/images/services/Hair Perming for salon in services doing.jpg',
         duration: '2.5-3.5 hours'
       }
     ],
@@ -271,35 +271,35 @@ const Services = () => {
         name: 'Nail Art Design',
         price: '₹500 - ₹1500',
         description: 'Creative and trendy nail art designs by expert artists',
-        image: '/images/nailart.jpg',
+        image: '/images/services/Nail Art .jpg',
         duration: '1-1.5 hours'
       },
       {
         name: 'Paraffin Treatment',
         price: '₹800 - ₹1200',
         description: 'Moisturizing paraffin treatment for soft, smooth hands and feet',
-        image: '/images/paraffin.jpg',
+        image: '/images/services/Paraffin Treatment.jpg',
         duration: '30-45 mins'
       },
       {
         name: 'Acrylic Nails',
         price: '₹2000 - ₹3500',
         description: 'Professional acrylic nail extensions with custom designs',
-        image: '/images/acrylic.jpg',
+        image: '/images/services/Acrylic.jpg',
         duration: '2-2.5 hours'
       },
       {
         name: 'SNS Dipping Powder',
         price: '₹2500 - ₹4000',
         description: 'Long-lasting SNS dipping powder nails with shine',
-        image: '/images/sns.jpg',
+        image: '/images/services/SNS.jpg',
         duration: '1.5-2 hours'
       },
       {
         name: 'French Manicure',
         price: '₹800 - ₹1500',
         description: 'Classic French manicure with perfect white tips',
-        image: '/images/french.jpg',
+        image: '/images/services/French.jpg',
         duration: '1-1.5 hours'
       }
     ],
@@ -308,70 +308,70 @@ const Services = () => {
         name: 'Basic Facial',
         price: '₹400 - ₹1500',
         description: 'Deep cleansing and basic skin care treatment',
-        image: '/images/basic.jpg',
+        image: '/images/Basic.jpg',
         duration: '45-60 mins'
       },
       {
         name: 'Premium Facial',
         price: '₹2500 - ₹4000',
         description: 'Advanced facial with premium products',
-        image: '/images/premium.jpg',
+        image: '/images/Premium.jpg',
         duration: '1-1.5 hours'
       },
       {
         name: 'Bridal Facial',
         price: '₹4000 - ₹5000',
         description: 'Special bridal facial package with premium products',
-        image: '/images/bridal.jpg',
+        image: '/images/Bridal.jpg',
         duration: '2-2.5 hours'
       },
       {
         name: 'Gold Facial',
         price: '₹3000 - ₹5000',
         description: 'Luxurious gold facial for radiant, glowing skin',
-        image: '/images/goldfacial.jpg',
+        image: '/images/services/Gold Facialin salon service doing.jpg',
         duration: '1.5 hours'
       },
       {
         name: 'Anti-Aging Facial',
         price: '₹3500 - ₹6000',
         description: 'Advanced anti-aging treatment with premium products',
-        image: '/images/antiaging.jpg',
+        image: '/images/services/anti aging.jpg',
         duration: '1.5-2 hours'
       },
       {
         name: 'Detox Facial',
         price: '₹2000 - ₹3500',
         description: 'Deep cleansing and detoxifying facial treatment',
-        image: '/images/detox.jpg',
+        image: '/images/services/Detox.jpg',
         duration: '1-1.5 hours'
       },
       {
         name: 'Diamond Facial',
         price: '₹5000 - ₹8000',
         description: 'Premium diamond facial for ultimate skin rejuvenation',
-        image: '/images/diamondfacial.jpg',
+        image: '/images/services/diamond facial.jpg',
         duration: '2 hours'
       },
       {
         name: 'Oxygen Facial',
         price: '₹3000 - ₹5000',
         description: 'Revitalizing oxygen facial for fresh, glowing skin',
-        image: '/images/oxygen.jpg',
+        image: '/images/services/Oxygen.jpg',
         duration: '1.5 hours'
       },
       {
         name: 'LED Light Therapy',
         price: '₹2500 - ₹4000',
         description: 'Advanced LED light therapy for skin concerns',
-        image: '/images/led.jpg',
+        image: '/images/services/LED Light.jpg',
         duration: '1 hour'
       },
       {
         name: 'Hydrafacial',
         price: '₹4000 - ₹6000',
         description: 'Advanced hydrafacial treatment for deep hydration',
-        image: '/images/hydra.jpg',
+        image: '/images/services/Hydrafacia.jpg',
         duration: '1.5 hours'
       }
     ],
@@ -401,49 +401,49 @@ const Services = () => {
         name: 'Engagement Makeup',
         price: '₹5000 - ₹8000',
         description: 'Special engagement makeup with trial session',
-        image: '/images/engagement.jpg',
+        image: '/images/services/Engagement Makeup.jpg',
         duration: '1.5-2 hours'
       },
       {
         name: 'Character Makeup',
         price: '₹2000 - ₹4000',
         description: 'Creative character and theme-based makeup',
-        image: '/images/character.jpg',
+        image: '/images/services/character Makeup.jpg',
         duration: '1-2 hours'
       },
       {
         name: 'Airbrush Makeup',
         price: '₹4000 - ₹7000',
         description: 'Flawless airbrush makeup for special occasions',
-        image: '/images/airbrush.jpg',
+        image: '/images/services/air bush.jpg',
         duration: '1.5-2 hours'
       },
       {
         name: 'Mehendi Makeup',
         price: '₹3000 - ₹5000',
         description: 'Traditional mehendi ceremony makeup with trial',
-        image: '/images/mehendi.jpg',
+        image: '/images/services/Mehendi Makeup.jpg',
         duration: '1.5 hours'
       },
       {
         name: 'Fashion Show Makeup',
         price: '₹4000 - ₹7000',
         description: 'Professional makeup for fashion shows and events',
-        image: '/images/fashion.jpg',
+        image: '/images/services/Fashion Show Makeup.jpg',
         duration: '2 hours'
       },
       {
         name: 'Photoshoot Makeup',
         price: '₹3500 - ₹6000',
         description: 'Camera-ready makeup for photoshoots',
-        image: '/images/photoshoot.jpg',
+        image: '/images/services/photoshoot .jpg',
         duration: '1.5-2 hours'
       },
       {
         name: 'Glamour Makeup',
         price: '₹5000 - ₹8000',
         description: 'High-impact glamour makeup for special occasions',
-        image: '/images/glamour.jpg',
+        image: '/images/services/glamour.jpg',
         duration: '2 hours'
       }
     ],
@@ -473,49 +473,49 @@ const Services = () => {
         name: 'Nail Art Course',
         price: '₹20000',
         description: 'Professional nail art and design techniques',
-        image: '/images/nailcourse.jpg',
+        image: '/images/services/nail art course.jpg',
         duration: '2 months'
       },
       {
         name: 'Spa Therapy Course',
         price: '₹30000',
         description: 'Comprehensive spa and massage therapy training',
-        image: '/images/spacourse.jpg',
+        image: '/images/services/Spa Therapy Course.jpg',
         duration: '3 months'
       },
       {
         name: 'Bridal Makeup Course',
         price: '₹40000',
         description: 'Specialized bridal makeup and styling techniques',
-        image: '/images/bridalcourse.jpg',
+        image: '/images/services/Bridal Makeup Course.jpg',
         duration: '3 months'
       },
       {
         name: 'Hair Coloring Course',
         price: '₹35000',
         description: 'Professional hair coloring and treatment techniques',
-        image: '/images/colorcourse.jpg',
+        image: '/images/services/hair Color.jpg',
         duration: '3 months'
       },
       {
         name: 'Facial Therapy Course',
         price: '₹25000',
         description: 'Advanced facial treatments and skin care techniques',
-        image: '/images/facialcourse.jpg',
+        image: '/images/services/Facial Therapy Course.jpg',
         duration: '2 months'
       },
       {
         name: 'Hair Styling Course',
         price: '₹30000',
         description: 'Professional hair styling and cutting techniques',
-        image: '/images/stylecourse.jpg',
+        image: '/images/services/Hair styling.jpg',
         duration: '3 months'
       },
       {
         name: 'Beauty Therapy Diploma',
         price: '₹75000',
         description: 'Comprehensive beauty therapy and salon management',
-        image: '/images/diploma.jpg',
+        image: '/images/services/beauty therapy.jpg',
         duration: '6 months'
       }
     ]
