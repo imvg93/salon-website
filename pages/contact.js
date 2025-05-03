@@ -121,7 +121,7 @@ export default function Contact() {
                     <FaMapMarkerAlt className="text-[#D4AF37] mt-1" />
                     <div>
                       <h3 className="font-semibold text-[#2C1810]">Address</h3>
-                      <p className="text-[#5C4033]">JNTU to Hitech city road, Kukatpally</p>
+                      <p className="text-[#5C4033]">JNTU to Hitech city road,Near MIG Bus-stop KPHB</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">

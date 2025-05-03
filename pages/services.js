@@ -23,7 +23,7 @@ const Services = () => {
           'Complete bridal makeup with trial',
           'Manicure and pedicure',
           'Free consultation',
-          'Complimentary touch-up kit'
+          
         ]
       },
       {
@@ -276,10 +276,10 @@ const Services = () => {
     ],
     facial: [
       {
-        name: 'Basic Facial',
-        description: 'Deep cleansing and basic skin care treatment',
-        image: '/images/Basic.jpg',
-        duration: '45-60 mins'
+        name: 'Hydrafacial',
+        description: 'Advanced hydrafacial treatment for deep hydration',
+        image: '/images/services/Hydrafacia.jpg',
+        duration: '1.5 hours'
       },
       {
         name: 'Premium Facial',
@@ -330,10 +330,11 @@ const Services = () => {
         duration: '1 hour'
       },
       {
-        name: 'Hydrafacial',
-        description: 'Advanced hydrafacial treatment for deep hydration',
-        image: '/images/services/Hydrafacia.jpg',
-        duration: '1.5 hours'
+        name: 'Basic Facial',
+        description: 'Deep cleansing and basic skin care treatment',
+        image: '/images/Basic.jpg',
+        duration: '45-60 mins'
+        
       }
     ],
     makeup: [
@@ -476,6 +477,12 @@ const Services = () => {
       <div className={styles.header}>
         <h1>Our Services</h1>
         <p>Discover our range of premium beauty and styling services</p>
+        <div className="mt-4 p-4 bg-pink-100 border-2 border-pink-300 rounded-lg max-w-2xl mx-auto shadow-md">
+          <p className="text-gray-800 text-sm font-medium text-center">
+            <span className="text-pink-600 font-semibold">Note:</span> For detailed pricing and special offers, please contact your nearest branch. 
+            Our friendly staff will be happy to assist you with current rates and available packages.
+          </p>
+        </div>
       </div>
 
       <div className={styles.tabs}>

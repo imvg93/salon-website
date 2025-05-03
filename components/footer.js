@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <FaMapMarkerAlt className="text-pink-500" />
-                <span className="text-gray-800">JNTU to Hitech city road, Kukatpally</span>
+                <span className="text-gray-800">JNTU to Hitech city road, KPHB</span>
               </div>
               <div className="flex items-center gap-2">
                 <FaPhone className="text-pink-500" />

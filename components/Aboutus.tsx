@@ -5,8 +5,8 @@ import styles from "../styles/AboutUs.css";
 
 const timelineData = [
   { year: "2011", event: "Opened our very first salon." },
-  { year: "2014", event: "Launched exclusive bridal and party makeover packages." },
-  { year: "2017", event: "Started selling curated beauty or haircare products." },
+  { year: "2014", event: "Organized our first bridal beauty and fashion week." },
+  { year: "2017", event: "Hosted our first annual beauty and fashion showcase event." },
   { year: "2020", event: "Crossed 20,000+ satisfied clients milestone." },
   { year: "2024", event: "Expanded to 2 new locations." },
   { year: "2025", event: "Launched advanced hair and beauty courses." },
@@ -231,7 +231,7 @@ const AboutUs = () => {
                 whileTap={{ scale: 0.95 }}
                 className="inline-block bg-white hover:bg-gray-50 text-purple-700 font-medium px-8 py-3 rounded-full shadow-md transition duration-300 border-2 border-purple-700"
               >
-                Explore Training
+                Explore Courses
               </motion.div>
             </Link>
           </div>

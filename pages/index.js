@@ -5,7 +5,7 @@ import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import Head from 'next/head';
 import Image from 'next/image';
-import { FaWhatsapp } from 'react-icons/fa';
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 
 export default function Home() {
   return (
@@ -16,16 +16,27 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* WhatsApp Floating Button */}
-      <a
-        href="https://wa.me/+919959673434?text=Hi%20book%20an%20appointment"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 z-50 flex items-center justify-center"
-        style={{ width: '60px', height: '60px' }}
-      >
-        <FaWhatsapp className="w-8 h-8" />
-      </a>
+      {/* Social Media Floating Buttons */}
+      <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+        <a
+          href="https://wa.me/+919959673434?text=Hi%20book%20an%20appointment"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 flex items-center justify-center"
+          style={{ width: '60px', height: '60px' }}
+        >
+          <FaWhatsapp className="w-8 h-8" />
+        </a>
+        <a
+          href="https://www.instagram.com/catwalk__salon/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white p-4 rounded-full shadow-lg hover:opacity-90 transition-all duration-300 flex items-center justify-center"
+          style={{ width: '60px', height: '60px' }}
+        >
+          <FaInstagram className="w-8 h-8" />
+        </a>
+      </div>
 
       <Navbar /> 
       <main className={styles.main}>

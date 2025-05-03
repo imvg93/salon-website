@@ -106,7 +106,7 @@ export default function BookingForm() {
             value={formData.name}
             onChange={handleChange}
             placeholder="Full Name"
-            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-700 placeholder-gray-400"
+            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-yellow-500 placeholder-gray-400"
             required
           />
           <input
@@ -115,7 +115,7 @@ export default function BookingForm() {
             onChange={handleChange}
             placeholder="Email Address"
             type="email"
-            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-700 placeholder-gray-400"
+            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-yellow-500 placeholder-gray-400"
             required
           />
           <input
@@ -123,7 +123,7 @@ export default function BookingForm() {
             value={formData.phone}
             onChange={handleChange}
             placeholder="Phone Number"
-            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-700 placeholder-gray-400"
+            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-yellow-500 placeholder-gray-400"
             required
           />
           <input
@@ -132,13 +132,13 @@ export default function BookingForm() {
             onChange={handleChange}
             placeholder="Age(optional)"
             type="number"
-            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-700 placeholder-gray-400"
+            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-yellow-500 placeholder-gray-400"
           />
           <select
             name="gender"
             value={formData.gender}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-700"
+            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-yellow-500"
             required
           >
             <option value="">Select Gender</option>
@@ -157,7 +157,7 @@ export default function BookingForm() {
             name="branch"
             value={formData.branch}
             onChange={handleChange}
-            className={`w-full p-3 border rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-700 ${
+            className={`w-full p-3 border rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-yellow-500 ${
               formData.gender === 'male' && formData.branch === 'kphb' ? 'border-red-500' : 'border-gray-200'
             }`}
             required
@@ -182,7 +182,7 @@ export default function BookingForm() {
             name="service"
             value={formData.service}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-700"
+            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-yellow-500"
             required
           >
             <option value="">Select Service</option>
@@ -201,7 +201,7 @@ export default function BookingForm() {
             name="subService"
             value={formData.subService}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-700"
+            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-yellow-500"
           >
             <option value="">Select Specific Service</option>
             {formData.service === "haircut" && (
@@ -234,7 +234,7 @@ export default function BookingForm() {
             value={formData.date}
             onChange={handleChange}
             type="date"
-            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-700"
+            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-yellow-500"
             required
           />
           <input
@@ -242,14 +242,14 @@ export default function BookingForm() {
             value={formData.time}
             onChange={handleChange}
             type="time"
-            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-700"
+            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-yellow-500"
             required
           />
           <select
             name="duration"
             value={formData.duration}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-700"
+            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-yellow-500"
             required
           >
             <option value="30">30 minutes</option>
@@ -270,13 +270,13 @@ export default function BookingForm() {
             value={formData.preferredStylist}
             onChange={handleChange}
             placeholder="Preferred Stylist (Optional)"
-            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-700 placeholder-gray-400"
+            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-yellow-500 placeholder-gray-400"
           />
           <select
             name="previousVisit"
             value={formData.previousVisit}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-700"
+            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-yellow-500"
           >
             <option value="no">First Time Visit</option>
             <option value="yes">Previous Customer</option>
@@ -287,14 +287,14 @@ export default function BookingForm() {
           value={formData.specialRequirements}
           onChange={handleChange}
           placeholder="Any special requirements or allergies?"
-          className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-700 placeholder-gray-400 h-24"
+          className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-yellow-500 placeholder-gray-400 h-24"
         />
         <textarea
           name="notes"
           value={formData.notes}
           onChange={handleChange}
           placeholder="Additional notes or requests"
-          className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-700 placeholder-gray-400 h-24"
+          className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-yellow-500 placeholder-gray-400 h-24"
         />
       </div>
 
@@ -306,7 +306,7 @@ export default function BookingForm() {
             name="preferredContact"
             value={formData.preferredContact}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-700"
+            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-yellow-500"
           >
             <option value="phone">Phone</option>
             <option value="email">Email</option>
@@ -316,7 +316,7 @@ export default function BookingForm() {
             name="reminderPreference"
             value={formData.reminderPreference}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-700"
+            className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-yellow-500"
           >
             <option value="sms">SMS Reminder</option>
             <option value="email">Email Reminder</option>

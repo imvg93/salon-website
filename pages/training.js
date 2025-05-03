@@ -128,7 +128,7 @@ export default function Training() {
               onClick={handleExploreCourses}
               className="bg-[#D4AF37] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#B38B1F] transition shadow-lg"
             >
-              Explore Courses
+              Explore Training
             </motion.button>
           </div>
         </div>
