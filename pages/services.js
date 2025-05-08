@@ -12,7 +12,7 @@ const Services = () => {
   const services = {
     packages: [
       {
-        name: 'Bridal Package',
+        name: 'Bridal Packag',
         description: 'Complete bridal package for the perfect wedding look',
         image: '/images/services/bridal package salon image to see clients.jpg',
         benefits: [
