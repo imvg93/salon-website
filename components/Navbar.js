@@ -10,8 +10,8 @@ export default function Navbar() {
         <h1 className={styles.logo}>Catwalk</h1>
         <ul className={styles.navLinks}>
           <li><a href="/" className={styles.navLink}>Home</a></li>
-          <li><a href="/about-us" className={styles.navLink}>About</a></li>
           <li><a href="/services" className={styles.navLink}>Services</a></li>
+          <li><a href="/about-us" className={styles.navLink}>About</a></li>
           <li><a href="/tattoo-intro" className={styles.navLink}>Tattoo Studio</a></li>
           <li><a href="/training" className={styles.navLink}>Training</a></li>     
           <li><a href="/contact" className={styles.navLink}>Contact</a></li>          

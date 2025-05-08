@@ -15,7 +15,6 @@ const Services = () => {
         name: 'Bridal Package',
         description: 'Complete bridal package for the perfect wedding look',
         image: '/images/services/bridal package salon image to see clients.jpg',
-        duration: 'Full Day',
         benefits: [
           'Pre-bridal facial treatments (3 sessions)',
           'Hair spa and treatment',
@@ -41,14 +40,17 @@ const Services = () => {
       },
       {
         name: 'Hair Care Package',
-        description: 'Complete hair care and styling package',
+        description: 'Complete hair care and beauty ',
         image: '/images/services/e538d28e-f45b-46a1-b3b6-a52f627595c1.jpeg',
         duration: '2-3 hours',
         benefits: [
           'Hair spa',
-          'Haircut and styling',
-          'Hair treatment',
+          'Haircut',
           'Scalp massage',
+          'pedicure',
+          'manicure',
+          'facial',
+          'waxing'
           
         ]
       },
@@ -74,8 +76,9 @@ const Services = () => {
           'Haircut and styling',
           'Facial treatment',
           'Manicure and pedicure',
-          'Makeup',
-          
+          'Waxing',
+          'Hair spa',
+
         ]
       },
       {
@@ -85,10 +88,12 @@ const Services = () => {
         duration: '2-3 hours',
         benefits: [
           'Haircut and styling',
-          'Face massage',
+          'O3 Facials/radiant grooming Facials',
           'Beard trim and styling',
           'Manicure',
-          
+          'pedicure',
+          'hair spa'
+
         ]
       }
     ],
@@ -114,7 +119,7 @@ const Services = () => {
           '20% off on all services',
           'Priority booking',
           'Free birthday package',
-          'Quarterly free facial',
+          'One free facial',
           'Exclusive member events'
         ]
       },
@@ -127,6 +132,7 @@ const Services = () => {
           '30% off on all services',
           'VIP priority booking',
           'Monthly free treatment',
+          'O3 facials & Radiant Facial',
           'Exclusive member events',
           'Personal beauty consultant',
           'Complimentary spa day'
