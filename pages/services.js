@@ -372,7 +372,7 @@ const Services = () => {
         name: 'Character Makeup',
         description: 'Creative character and theme-based makeup',
         image: '/images/services/character Makeup.jpg',
-        duration: '1-2 hours'
+        duration: '1 hours'
       },
       {
         name: 'Airbrush Makeup',
