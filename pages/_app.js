@@ -1,5 +1,4 @@
 import "../styles/globals.css";  // Use relative path
-import "../styles/AboutUs.css";  // Add AboutUs styles
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useEffect } from 'react';

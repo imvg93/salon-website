@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import styles from "../styles/AboutUs.css";
+import styles from "../styles/AboutUs.module.css";
 
 const timelineData = [
   { year: "2011", event: "Opened our very first salon." },
@@ -20,7 +20,7 @@ const AboutUs = () => {
       {/* Home Button (Sticky Top Left) */}
       <div className="right-0">
         <Link href="/">
-          <button className="catwalk-button">
+          <button className={styles['catwalk-button']}>
             Catwalk
           </button>
         </Link>
@@ -138,18 +138,18 @@ const AboutUs = () => {
           className="space-y-6"
         >
           <h3 className="text-2xl font-semibold text-purple-700 text-center">Our Moments</h3>
-          <div className="gallery-grid">
+          <div className={styles['gallery-grid']}>
             {[1, 2, 3, 4].map((index) => (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
-                className="gallery-item"
+                className={styles['gallery-item']}
               >
                 <img
                   src={`/images/moment-${index}.jpg`}
                   alt={`Gallery image ${index}`}
-                  className="gallery-image"
+                  className={styles['gallery-image']}
                 />
               </motion.div>
             ))}
