@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Catwalk Salons - Salons & Beauty Training</title>
+        <title>Catwalk Salons - Salons & Beauty Training </title>
         <meta name="description" content="Professional beauty training and salon services" />
         <link rel="icon" type="image/png" href="/favicon.png" />
       </Head>
