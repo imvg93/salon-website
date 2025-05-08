@@ -69,7 +69,7 @@ const AboutUs = () => {
           <h3 className="text-2xl font-semibold text-purple-700">What We Do</h3>
           <ul className="grid md:grid-cols-2 gap-6 text-gray-700">
             <li className="bg-white p-5 rounded-2xl shadow-md hover:shadow-xl transition">
-              💇‍♀️ Salon Services: Haircuts, styling, coloring, facials, and more.
+              💇‍♀️ Salon Services: Haircuts, styling, coloring, facials, and more
             </li>
             <li className="bg-white p-5 rounded-2xl shadow-md hover:shadow-xl transition">
               🎓 Beauty Training: Certified courses in hair, makeup, skincare, and salon management.
