@@ -72,7 +72,7 @@ const AboutUs = () => {
               💇‍♀️ Salon Services: Haircuts, styling, coloring, facials, and more
             </li>
             <li className="bg-white p-5 rounded-2xl shadow-md hover:shadow-xl transition">
-              🎓 Beauty Training: Certified courses in hair, makeup, skincare, and salon management.
+              🎓 Beauty Training: Certified courses in hair, makeup, skincare, and salon management
             </li>
           </ul>
         </motion.div>
