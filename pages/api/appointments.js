@@ -1,6 +1,11 @@
 // pages/api/appointments.js
 import { Resend } from 'resend';
 
+// Check if RESEND_API_KEY is configured
+if (!process.env.RESEND_API_KEY) {
+  console.error('RESEND_API_KEY is not configured in environment variables');
+}
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req, res) {
@@ -29,8 +34,28 @@ export default async function handler(req, res) {
       reminderPreference
     } = req.body;
 
+    // Log the received data
+    console.log('Received booking data:', {
+      name,
+      email,
+      phone,
+      branch,
+      service,
+      date,
+      time
+    });
+
     // Validate required fields
     if (!name || !email || !phone || !date || !time || !branch || !service) {
+      console.log('Missing required fields:', {
+        name: !name,
+        email: !email,
+        phone: !phone,
+        date: !date,
+        time: !time,
+        branch: !branch,
+        service: !service
+      });
       return res.status(400).json({
         success: false,
         message: 'Please fill in all required fields'
@@ -92,6 +117,7 @@ export default async function handler(req, res) {
 
     try {
       // Send email to salon
+      console.log('Attempting to send email to salon...');
       const emailResponse = await resend.emails.send({
         from: 'Catwalk Salon <onboarding@resend.dev>',
         to: 'girishveeranki3@gmail.com',
@@ -100,6 +126,7 @@ export default async function handler(req, res) {
       });
 
       // Send confirmation email to customer
+      console.log('Attempting to send confirmation email to customer...');
       const customerEmailContent = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;">
           <h2 style="color: #333; text-align: center; margin-bottom: 20px;">Appointment Confirmation</h2>
@@ -138,12 +165,20 @@ export default async function handler(req, res) {
         throw new Error(emailResponse?.error?.message || 'Failed to send email');
       }
 
+      console.log('Emails sent successfully');
       return res.status(200).json({
         success: true,
         message: 'Appointment received successfully'
       });
     } catch (emailError) {
       console.error('Email error:', emailError);
+      // Check if it's an API key error
+      if (emailError.message?.includes('API key')) {
+        return res.status(500).json({
+          success: false,
+          message: 'Email service configuration error. Please contact support.'
+        });
+      }
       return res.status(500).json({
         success: false,
         message: 'Failed to send email notification: ' + (emailError.message || 'Unknown error')
