@@ -18,15 +18,27 @@ const AboutUs = () => {
     <section id="about" className="relative bg-gradient-to-br from-purple-50 to-white py-20 px-6 sm:px-10 md:px-16 font-sans">
       
       {/* Home Button (Sticky Top Left) */}
-      <div className="right-0">
+      <div className="absolute top-6 left-6">
         <Link href="/">
-          <button className={styles['catwalk-button']}>
-            Catwalk
+          <button className={`${styles['catwalk-button']} flex items-center gap-2`}>
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              className="h-5 w-5" 
+              viewBox="0 0 20 20" 
+              fill="currentColor"
+            >
+              <path 
+                fillRule="evenodd" 
+                d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" 
+                clipRule="evenodd" 
+              />
+            </svg>
+            <span className="hidden sm:inline">Catwalk</span>
           </button>
         </Link>
       </div>
 
-      <div className="max-w-6xl mx-auto space-y-20">
+      <div className="max-w-6xl mx-auto space-y-20 pt-16">
 
         {/* Header */}
         <div className="text-center space-y-3">
