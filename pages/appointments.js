@@ -14,7 +14,11 @@ const Appointments = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-16">
-          <div>
+          <Link href="/" className="flex items-center space-x-2">
+            <FaArrowLeft className="w-4 h-4 text-[#ff3366] group-hover:-translate-x-1 transition-transform" />
+            <span className="hidden md:inline">Catwalk</span>
+          </Link>
+          <div className="text-right">
             <h1 className="text-4xl md:text-5xl font-black tracking-tight">
               <span className="text-[#ff3366]">Catwalk</span>
               <span className="block text-2xl md:text-3xl font-light text-gray-400 mt-2">
@@ -25,13 +29,6 @@ const Appointments = () => {
               </span>
             </h1>
           </div>
-          <Link 
-            href="/" 
-            className="group flex items-center gap-3 px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full transition-all duration-300"
-          >
-            <FaArrowLeft className="w-4 h-4 text-[#ff3366] group-hover:-translate-x-1 transition-transform" />
-            <span>Back to Home</span>
-          </Link>
         </div>
 
         {/* Main Content */}

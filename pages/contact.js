@@ -69,11 +69,9 @@ export default function Contact() {
     <main className="min-h-screen bg-[#FFF9F0]">
       {/* Back Button */}
       <div className="absolute top-4 left-4 z-10">
-        <Link href="/">
-          <button className="bg-[#080808] text-white px-6 py-2 rounded-lg hover:bg-[#fd513e] transition shadow-md flex items-center gap-2">
-            <FaArrowLeft className="w-4 h-4" />
-            Catwalk
-          </button>
+        <Link href="/" className="flex items-center space-x-2">
+          <FaArrowLeft className="w-4 h-4" />
+          <span className="hidden md:inline">Catwalk</span>
         </Link>
       </div>
 

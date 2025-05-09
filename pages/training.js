@@ -88,11 +88,9 @@ export default function Training() {
     <main className="min-h-screen bg-[#FFF9F0]">
       {/* Back Button */}
       <div className="absolute top-4 left-4 z-10">
-        <Link href="/">
-          <button className="bg-[#D4AF37] text-white px-6 py-2 rounded-lg hover:bg-[#050505] transition shadow-md flex items-center gap-2">
-            
-            Catwalk
-          </button>
+        <Link href="/" className="flex items-center space-x-2">
+          <FaArrowLeft className="w-4 h-4" />
+          <span className="hidden md:inline">Catwalk</span>
         </Link>
       </div>
 

@@ -6,11 +6,9 @@ const PrivacyPolicy = () => {
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
-          <Link href="/">
-            <button className="bg-[#f85555] text-white px-6 py-2 rounded-lg hover:bg-[#121212] transition shadow-md flex items-center gap-2">
-              <FaArrowLeft className="w-4 h-4" />
-              Back to Home
-            </button>
+          <Link href="/" className="flex items-center space-x-2">
+            <FaArrowLeft className="w-4 h-4" />
+            <span className="hidden md:inline">Catwalk</span>
           </Link>
         </div>
 

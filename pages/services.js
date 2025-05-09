@@ -475,12 +475,12 @@ const Services = () => {
         <Link href="/">
           <button className="bg-[#f85555] text-white px-6 py-2 rounded-lg hover:bg-[#121212] transition shadow-md flex items-center gap-2">
             <FaArrowLeft className="w-4 h-4" />
-            Catwalk
+            <span className="hidden md:inline">Catwalk</span>
           </button>
         </Link>
       </div>
 
-      <div className={styles.header}>
+      <div className={`${styles.header} pt-24`}>
         <h1>Our Services</h1>
         <p>Discover our range of premium beauty and styling services</p>
         <div className="mt-4 p-4 bg-pink-100 border-2 border-pink-300 rounded-lg max-w-2xl mx-auto shadow-md">

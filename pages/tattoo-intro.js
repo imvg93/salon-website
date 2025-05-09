@@ -12,7 +12,7 @@ const TattooIntro = () => {
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center space-x-2">
               <FaArrowLeft className="w-5 h-5 text-[#ff6b35]" />
-              <span className="text-xl font-bold">Catwalk</span>
+              <span className="text-xl font-bold hidden md:inline">Catwalk</span>
             </Link>
             <div className="flex items-center space-x-6">
               <a href="https://www.instagram.com/catwalk__salon/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#ff6b35] transition-colors">
