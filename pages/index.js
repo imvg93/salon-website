@@ -100,7 +100,7 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
               className={styles.serviceCard}
             >
-              <img src="/images/tattoo-custom.jpg" alt="Custom Tattoo Designs" className={styles.serviceImage} />
+              <img src="/images/Designer (1).jpeg" alt="Custom Tattoo Designs" className={styles.serviceImage} />
               <h3>Custom Tattoo Designs</h3>
               <p>Unique, personalized designs created just for you by our expert artists.</p>
             </motion.div>
@@ -108,7 +108,7 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
               className={styles.serviceCard}
             >
-              <img src="/images/tattoo-coverup.jpg" alt="Cover-up Tattoos" className={styles.serviceImage} />
+              <img src="/images/Designer.jpeg" alt="Cover-up Tattoos" className={styles.serviceImage} />
               <h3>Cover-up Tattoos</h3>
               <p>Transform existing tattoos into beautiful new designs.</p>
             </motion.div>
@@ -116,7 +116,7 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
               className={styles.serviceCard}
             >
-              <img src="/images/tattoo-touchup.jpg" alt="Tattoo Touch-ups" className={styles.serviceImage} />
+              <img src="/images/tattoo.png" alt="Tattoo Touch-ups" className={styles.serviceImage} />
               <h3>Tattoo Touch-ups</h3>
               <p>Professional touch-up services to maintain your tattoo's vibrancy.</p>
             </motion.div>

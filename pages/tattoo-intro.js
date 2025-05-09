@@ -15,10 +15,10 @@ const TattooIntro = () => {
               <span className="text-xl font-bold">Catwalk</span>
             </Link>
             <div className="flex items-center space-x-6">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#ff6b35] transition-colors">
+              <a href="https://www.instagram.com/catwalk__salon/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#ff6b35] transition-colors">
                 <FaInstagram className="w-6 h-6" />
               </a>
-              <a href="https://wa.me/your-number" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#ff6b35] transition-colors">
+              <a href="https://wa.me/+919959673434" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#ff6b35] transition-colors">
                 <FaWhatsapp className="w-6 h-6" />
               </a>
             </div>
