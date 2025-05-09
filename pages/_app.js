@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useEffect } from 'react';
 import Head from 'next/head';
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App({ Component, pageProps }) {
   // Add Google Analytics
@@ -52,6 +53,7 @@ export default function App({ Component, pageProps }) {
       <Component {...pageProps} />
       <ToastContainer />
       <SpeedInsights />
+      <Analytics />
     </>
   );
 }
