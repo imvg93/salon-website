@@ -1,40 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+💇‍♀️ **Catwalk Salon & Academy Website**
 
-## Getting Started
 
-First, run the development server:
+I created this website as a **full-stack web development project** to represent a real-world business—Catwalk Salon & Academy, our professional salon and beauty training center. This project allowed me to apply and strengthen my skills in **Next.js, Tailwind CSS, Supabase, and Resend**, while building a clean, responsive, and fully functional website from _scratch_.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This website is designed to provide an engaging and smooth experience for both clients and students. From showcasing services and beauty training courses to enabling online bookings and real-time inquiries, it reflects both the technical and aesthetic aspects of modern web design.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**🔨 My Role & Tech Stack**
+**Built the entire frontend using Next.js with Tailwind CSS and Framer Motion for smooth animations.**
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+**Integrated a booking form connected to Supabase for storing client info.**
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+**Set up email automation via Resend to handle form responses.**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+**Designed a custom floating chatbox with a dark theme for better engagement.**
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Deployed the site using Vercel for global performance and speed.**
 
-## Learn More
+🧾 Website Features
+✨ Responsive and visually appealing layout
 
-To learn more about Next.js, take a look at the following resources:
+💅 Salon services page with details and icons
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+📅 Online booking system with email & DB integration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🧑‍🎓 Courses page with professional training programs
 
-## Deploy on Vercel
+💬 Live floating chatbox for instant support
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+📍 About Us page showing our journey since 2011
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+🚀 Live Website
+👉 https://www.catwalksalons.com/
