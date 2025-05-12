@@ -47,10 +47,10 @@ const Services = () => {
           'Hair spa',
           'Haircut',
           'Scalp massage',
-          'pedicure',
-          'manicure',
-          'facial',
-          'waxing'
+          'Pedicure',
+          'Manicure',
+          'Facial',
+          'Waxing'
           
         ]
       },
@@ -88,11 +88,11 @@ const Services = () => {
         duration: '2-3 hours',
         benefits: [
           'Haircut and styling',
-          'O3 Facials/radiant grooming Facials',
+          'O3 Facials/Radiant grooming Facials',
           'Beard trim and styling',
           'Manicure',
-          'pedicure',
-          'hair spa'
+          'Pedicure',
+          'Hair spa'
 
         ]
       }

@@ -1,5 +1,6 @@
 // pages/confirmation.tsx
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function ConfirmationPage() {
   const [appointmentDetails, setAppointmentDetails] = useState<any>(null);
@@ -31,21 +32,21 @@ export default function ConfirmationPage() {
   });
 
   return (
-    <main className="min-h-screen bg-gray-100 p-6">
-      <div className="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+    <main className="min-h-screen bg-gray-100 p-6 overflow-x-hidden">
+      <div className="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-lg w-full">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold mb-2">Appointment Confirmed!</h2>
           <p className="text-xl text-gray-600">Thank you for booking with us.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
           {/* Personal Information */}
           <div className="space-y-4">
             <h3 className="text-xl font-semibold border-b pb-2">Personal Information</h3>
-        <div className="space-y-2">
-          <p><strong>Name:</strong> {appointmentDetails.name}</p>
-          <p><strong>Email:</strong> {appointmentDetails.email}</p>
-          <p><strong>Phone:</strong> {appointmentDetails.phone}</p>
+            <div className="space-y-2">
+              <p><strong>Name:</strong> {appointmentDetails.name}</p>
+              <p><strong>Email:</strong> {appointmentDetails.email}</p>
+              <p><strong>Phone:</strong> {appointmentDetails.phone}</p>
               {appointmentDetails.age && <p><strong>Age:</strong> {appointmentDetails.age}</p>}
               {appointmentDetails.gender && <p><strong>Gender:</strong> {appointmentDetails.gender}</p>}
             </div>
@@ -56,7 +57,7 @@ export default function ConfirmationPage() {
             <h3 className="text-xl font-semibold border-b pb-2">Appointment Details</h3>
             <div className="space-y-2">
               <p><strong>Branch:</strong> {appointmentDetails.branch === 'kphb' ? 'Catwalk Ladies Salon - KPHB' : 'Catwalk Unisex Salon - Nizampet'}</p>
-          <p><strong>Service:</strong> {appointmentDetails.service}</p>
+              <p><strong>Service:</strong> {appointmentDetails.service}</p>
               {appointmentDetails.subService && <p><strong>Specific Service:</strong> {appointmentDetails.subService}</p>}
               <p><strong>Date:</strong> {formattedDate}</p>
               <p><strong>Time:</strong> {formattedTime}</p>
@@ -89,7 +90,14 @@ export default function ConfirmationPage() {
 
         <div className="mt-8 text-center p-4 bg-gray-50 rounded-lg">
           <p className="text-lg mb-2">We look forward to seeing you!</p>
-          <p className="text-sm text-gray-600">If you need to make any changes to your appointment, please contact us at least 24 hours in advance.</p>
+          <p className="text-sm text-gray-600 mb-6">If you need to make any changes to your appointment, please contact us at least 3 hours in advance.</p>
+          
+          <Link 
+            href="/"
+            className="inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-md hover:shadow-lg"
+          >
+         back to home
+          </Link>
         </div>
       </div>
     </main>
