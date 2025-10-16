@@ -205,18 +205,94 @@
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
+/* Tattoo Section */
+.tattooSection {
+  padding: 5rem 1rem;
+  background-color: #F3F4F6;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+    padding: 0 0.5rem;
+  }
+
   .heroTitle {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    line-height: 1.2;
   }
 
   .heroSubtitle {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
   }
 
   .heroButtons {
     flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .primaryButton, .secondaryButton {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    padding: 0.875rem 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .serviceCard {
+    margin: 0 auto;
+    max-width: 350px;
+  }
+
+  .serviceCard h3 {
+    font-size: 1.25rem;
+    padding: 1rem 1rem 0.5rem;
+  }
+
+  .serviceCard p {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .feature {
+    padding: 1rem;
+  }
+
+  .featureIcon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .feature h3 {
+    font-size: 1rem;
+  }
+
+  .feature p {
+    font-size: 0.85rem;
+  }
+
+  .featuredServices, .tattooSection, .whyChooseUs {
+    padding: 3rem 0.5rem;
   }
 
   .contactContent {
@@ -225,5 +301,40 @@
 
   .contactInfo {
     padding-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .heroTitle {
+    font-size: 1.75rem;
+  }
+
+  .heroSubtitle {
+    font-size: 0.9rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .feature {
+    padding: 0.75rem;
+  }
+
+  .serviceCard h3 {
+    font-size: 1.1rem;
+  }
+
+  .serviceCard p {
+    font-size: 0.85rem;
   }
 }

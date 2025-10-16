@@ -94,19 +94,25 @@ export default function BookingForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-2xl mx-auto bg-white p-4 sm:p-8 rounded-xl shadow-lg space-y-4 sm:space-y-6">
-      <h2 className="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6 text-blue-600">Book Your Salon Appointment</h2>
+    <form onSubmit={handleSubmit} className="bg-transparent p-6 space-y-6">
+      <div className="text-center mb-8">
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">Book Your Appointment</h2>
+        <p className="text-gray-600 text-sm sm:text-base">Fill in your details to schedule your visit</p>
+      </div>
 
       {/* Personal Information Section */}
-      <div className="space-y-3 sm:space-y-4">
-        <h3 className="text-base sm:text-lg font-semibold border-b border-gray-200 pb-2 text-blue-500">Personal Information</h3>
-        <div className="grid grid-cols-1 gap-3 sm:gap-4">
+      <div className="space-y-4">
+        <div className="flex items-center gap-2 mb-4">
+          <div className="w-1 h-6 bg-blue-600 rounded-full"></div>
+          <h3 className="text-lg font-semibold text-gray-800">Personal Information</h3>
+        </div>
+        <div className="space-y-4">
           <input
             name="name"
             value={formData.name}
             onChange={handleChange}
             placeholder="Full Name"
-            className="w-full p-2.5 sm:p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-blue-600 placeholder-gray-400"
+            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-800 placeholder-gray-500 text-base"
             required
           />
           <input
@@ -115,7 +121,7 @@ export default function BookingForm() {
             onChange={handleChange}
             placeholder="Email Address"
             type="email"
-            className="w-full p-2.5 sm:p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-blue-600 placeholder-gray-400"
+            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-800 placeholder-gray-500 text-base"
             required
           />
           <input
@@ -123,238 +129,249 @@ export default function BookingForm() {
             value={formData.phone}
             onChange={handleChange}
             placeholder="Phone Number"
-            className="w-full p-2.5 sm:p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-blue-600 placeholder-gray-400"
+            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-800 placeholder-gray-500 text-base"
             required
           />
-          <div className="grid grid-cols-2 gap-3 sm:gap-4">
+          <div className="grid grid-cols-2 gap-3">
             <input
               name="age"
               value={formData.age}
               onChange={handleChange}
-              placeholder="Age(optional)"
+              placeholder="Age (optional)"
               type="number"
-              className="w-full p-2.5 sm:p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-blue-600 placeholder-gray-400"
+              className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-800 placeholder-gray-500 text-base"
             />
             <select
               name="gender"
               value={formData.gender}
               onChange={handleChange}
-              className="w-full p-2.5 sm:p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-blue-600"
+              className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-800 text-base"
               required
             >
-              <option value="">Select Gender</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
+              <option value="" className="text-gray-900">Select Gender</option>
+              <option value="male" className="text-gray-900">Male</option>
+              <option value="female" className="text-gray-900">Female</option>
+              <option value="other" className="text-gray-900">Other</option>
             </select>
           </div>
         </div>
       </div>
 
       {/* Appointment Details Section */}
-      <div className="space-y-3 sm:space-y-4">
-        <h3 className="text-base sm:text-lg font-semibold border-b border-gray-200 pb-2 text-blue-500">Appointment Details</h3>
-        <div className="grid grid-cols-1 gap-3 sm:gap-4">
+      <div className="space-y-4">
+        <div className="flex items-center gap-2 mb-4">
+          <div className="w-1 h-6 bg-blue-600 rounded-full"></div>
+          <h3 className="text-lg font-semibold text-gray-800">Appointment Details</h3>
+        </div>
+        <div className="space-y-4">
           <select
             name="branch"
             value={formData.branch}
             onChange={handleChange}
-            className={`w-full p-2.5 sm:p-3 border rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-blue-600 ${
-              formData.gender === 'male' && formData.branch === 'kphb' ? 'border-red-500' : 'border-gray-200'
+            className={`w-full p-4 border rounded-xl focus:ring-2 focus:ring-[#ff3366] focus:border-[#ff3366] bg-white/10 backdrop-blur-sm text-gray-800 text-base ${
+              formData.gender === 'male' && formData.branch === 'kphb' ? 'border-red-500' : 'border-white/20'
             }`}
             required
           >
-            <option value="">Select Branch</option>
+            <option value="" className="text-gray-900">Select Branch</option>
             <option 
               value="kphb" 
               disabled={formData.gender === 'male'}
+              className="text-gray-900"
             >
               Catwalk Ladies Salon - KPHB
             </option>
-            <option value="nizampet">Catwalk Unisex Salon - Nizampet</option>
+            <option value="nizampet" className="text-gray-900">Catwalk Unisex Salon - Nizampet</option>
           </select>
 
           {formData.gender === 'male' && formData.branch === 'kphb' && (
-            <p className="text-red-500 text-sm">
+            <p className="text-red-600 text-sm bg-red-50 p-3 rounded-lg border border-red-200">
               KPHB branch is for ladies only. Please select Nizampet branch for booking.
             </p>
           )}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-            <select
-              name="service"
-              value={formData.service}
-              onChange={handleChange}
-              className="w-full p-2.5 sm:p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-blue-600"
-              required
-            >
-              <option value="">Select Service</option>
-              <option value="haircut">Haircut & Styling</option>
-              <option value="coloring">Hair Coloring</option>
-              <option value="facial">Facial</option>
-              <option value="makeup">Makeup</option>
-              <option value="manicure">Manicure & Pedicure</option>
-              <option value="spa">Spa Treatment</option>
-              <option value="package">Full Package</option>
-              <option value="training">Training Program</option>
-              <option value="tattoo">Tattoo Services</option>
-              <option value="not mentioned">not mentioned</option>
-            </select>
+          <select
+            name="service"
+            value={formData.service}
+            onChange={handleChange}
+            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-800 text-base"
+            required
+          >
+            <option value="" className="text-gray-900">Select Service</option>
+            <option value="haircut" className="text-gray-900">Haircut & Styling</option>
+            <option value="coloring" className="text-gray-900">Hair Coloring</option>
+            <option value="facial" className="text-gray-900">Facial</option>
+            <option value="makeup" className="text-gray-900">Makeup</option>
+            <option value="manicure" className="text-gray-900">Manicure & Pedicure</option>
+            <option value="spa" className="text-gray-900">Spa Treatment</option>
+            <option value="package" className="text-gray-900">Full Package</option>
+            <option value="training" className="text-gray-900">Training Program</option>
+            <option value="tattoo" className="text-gray-900">Tattoo Services</option>
+            <option value="not mentioned" className="text-gray-900">Other</option>
+          </select>
 
-            <select
-              name="subService"
-              value={formData.subService}
-              onChange={handleChange}
-              className="w-full p-2.5 sm:p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-blue-600"
-            >
-              <option value="">Select Specific Service</option>
-              {formData.service === "haircut" && (
-                <>
-                  <option value="mens-cut">Men's Haircut</option>
-                  <option value="womens-cut">Women's Haircut</option>
-                  <option value="kids-cut">Kid's Haircut</option>
-                  <option value="styling">Hair Styling</option>
-                </>
-              )}
-              {formData.service === "coloring" && (
-                <>
-                  <option value="full-color">Full Color</option>
-                  <option value="highlights">Highlights</option>
-                  <option value="balayage">Balayage</option>
-                  <option value="root-touchup">Root Touch-up</option>
-                </>
-              )}
-              {formData.service === "facial" && (
-                <>
-                  <option value="basic">Basic Facial</option>
-                  <option value="premium">Premium Facial</option>
-                  <option value="bridal">Bridal Facial</option>
-                </>
-              )}
-              {formData.service === "tattoo" && (
-                <>
-                  <option value="custom-design">Custom Design</option>
-                  <option value="small-tattoo">Small Tattoo</option>
-                  <option value="medium-tattoo">Medium Tattoo</option>
-                  <option value="large-tattoo">Large Tattoo</option>
-                  <option value="cover-up">Cover-up Tattoo</option>
-                  <option value="touch-up">Touch-up Service</option>
-                </>
-              )}
-            </select>
-          </div>
+          <select
+            name="subService"
+            value={formData.subService}
+            onChange={handleChange}
+            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-800 text-base"
+          >
+            <option value="" className="text-gray-900">Select Specific Service</option>
+            {formData.service === "haircut" && (
+              <>
+                <option value="mens-cut" className="text-gray-900">Men's Haircut</option>
+                <option value="womens-cut" className="text-gray-900">Women's Haircut</option>
+                <option value="kids-cut" className="text-gray-900">Kid's Haircut</option>
+                <option value="styling" className="text-gray-900">Hair Styling</option>
+              </>
+            )}
+            {formData.service === "coloring" && (
+              <>
+                <option value="full-color" className="text-gray-900">Full Color</option>
+                <option value="highlights" className="text-gray-900">Highlights</option>
+                <option value="balayage" className="text-gray-900">Balayage</option>
+                <option value="root-touchup" className="text-gray-900">Root Touch-up</option>
+              </>
+            )}
+            {formData.service === "facial" && (
+              <>
+                <option value="basic" className="text-gray-900">Basic Facial</option>
+                <option value="premium" className="text-gray-900">Premium Facial</option>
+                <option value="bridal" className="text-gray-900">Bridal Facial</option>
+              </>
+            )}
+            {formData.service === "tattoo" && (
+              <>
+                <option value="custom-design" className="text-gray-900">Custom Design</option>
+                <option value="small-tattoo" className="text-gray-900">Small Tattoo</option>
+                <option value="medium-tattoo" className="text-gray-900">Medium Tattoo</option>
+                <option value="large-tattoo" className="text-gray-900">Large Tattoo</option>
+                <option value="cover-up" className="text-gray-900">Cover-up Tattoo</option>
+                <option value="touch-up" className="text-gray-900">Touch-up Service</option>
+              </>
+            )}
+          </select>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
-            <div className="space-y-1 sm:space-y-2">
-              <label className="block text-sm font-medium text-blue-500">Date</label>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Date</label>
               <input
                 name="date"
                 value={formData.date}
                 onChange={handleChange}
                 type="date"
-                className="w-full p-2.5 sm:p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-blue-600"
+                className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-800 text-base"
                 required
               />
             </div>
-            <div className="space-y-1 sm:space-y-2">
-              <label className="block text-sm font-medium text-blue-500">Time</label>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Time</label>
               <input
                 name="time"
                 value={formData.time}
                 onChange={handleChange}
                 type="time"
-                className="w-full p-2.5 sm:p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-blue-600"
+                className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-800 text-base"
                 required
               />
             </div>
-            <select
-              name="duration"
-              value={formData.duration}
-              onChange={handleChange}
-              className="w-full p-2.5 sm:p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-blue-600"
-              required
-            >
-              <option value="30">30 minutes</option>
-              <option value="60">1 hour</option>
-              <option value="90">1.5 hours</option>
-              <option value="120">2 hours</option>
-              <option value="180">3 hours</option>
-            </select>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Duration</label>
+              <select
+                name="duration"
+                value={formData.duration}
+                onChange={handleChange}
+                className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-800 text-base"
+                required
+              >
+                <option value="30" className="text-gray-900">30 minutes</option>
+                <option value="60" className="text-gray-900">1 hour</option>
+                <option value="90" className="text-gray-900">1.5 hours</option>
+                <option value="120" className="text-gray-900">2 hours</option>
+                <option value="180" className="text-gray-900">3 hours</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Additional Information Section */}
-      <div className="space-y-3 sm:space-y-4">
-        <h3 className="text-base sm:text-lg font-semibold border-b border-gray-200 pb-2 text-blue-500">Additional Information</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+      <div className="space-y-4">
+        <div className="flex items-center gap-2 mb-4">
+          <div className="w-1 h-6 bg-blue-600 rounded-full"></div>
+          <h3 className="text-lg font-semibold text-gray-800">Additional Information</h3>
+        </div>
+        <div className="space-y-4">
           <input
             name="preferredStylist"
             value={formData.preferredStylist}
             onChange={handleChange}
             placeholder="Preferred Stylist (Optional)"
-            className="w-full p-2.5 sm:p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-blue-600 placeholder-gray-400"
+            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-800 placeholder-gray-500 text-base"
           />
           <select
             name="previousVisit"
             value={formData.previousVisit}
             onChange={handleChange}
-            className="w-full p-2.5 sm:p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-blue-600"
+            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-800 text-base"
           >
-            <option value="no">First Time Visit</option>
-            <option value="yes">Previous Customer</option>
+            <option value="no" className="text-gray-900">First Time Visit</option>
+            <option value="yes" className="text-gray-900">Previous Customer</option>
           </select>
+          <textarea
+            name="specialRequirements"
+            value={formData.specialRequirements}
+            onChange={handleChange}
+            placeholder="Any special requirements or allergies?"
+            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-800 placeholder-gray-500 text-base h-24 resize-none"
+          />
+          <textarea
+            name="notes"
+            value={formData.notes}
+            onChange={handleChange}
+            placeholder="Additional notes or requests"
+            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-800 placeholder-gray-500 text-base h-24 resize-none"
+          />
         </div>
-        <textarea
-          name="specialRequirements"
-          value={formData.specialRequirements}
-          onChange={handleChange}
-          placeholder="Any special requirements or allergies?"
-          className="w-full p-2.5 sm:p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-blue-600 placeholder-gray-400 h-20 sm:h-24"
-        />
-        <textarea
-          name="notes"
-          value={formData.notes}
-          onChange={handleChange}
-          placeholder="Additional notes or requests"
-          className="w-full p-2.5 sm:p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-blue-600 placeholder-gray-400 h-20 sm:h-24"
-        />
       </div>
 
       {/* Communication Preferences Section */}
-      <div className="space-y-3 sm:space-y-4">
-        <h3 className="text-base sm:text-lg font-semibold border-b border-gray-200 pb-2 text-blue-500">Communication Preferences</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+      <div className="space-y-4">
+        <div className="flex items-center gap-2 mb-4">
+          <div className="w-1 h-6 bg-blue-600 rounded-full"></div>
+          <h3 className="text-lg font-semibold text-gray-800">Communication Preferences</h3>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <select
             name="preferredContact"
             value={formData.preferredContact}
             onChange={handleChange}
-            className="w-full p-2.5 sm:p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-blue-600"
+            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-800 text-base"
           >
-            <option value="phone">Phone</option>
-            <option value="email">Email</option>
-            <option value="whatsapp">WhatsApp</option>
+            <option value="phone" className="text-gray-900">Phone</option>
+            <option value="email" className="text-gray-900">Email</option>
+            <option value="whatsapp" className="text-gray-900">WhatsApp</option>
           </select>
           <select
             name="reminderPreference"
             value={formData.reminderPreference}
             onChange={handleChange}
-            className="w-full p-2.5 sm:p-3 border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-blue-600"
+            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-800 text-base"
           >
-            <option value="sms">SMS Reminder</option>
-            <option value="email">Email Reminder</option>
-            <option value="whatsapp">WhatsApp Reminder</option>
-            <option value="none">No Reminder</option>
+            <option value="sms" className="text-gray-900">SMS Reminder</option>
+            <option value="email" className="text-gray-900">Email Reminder</option>
+            <option value="whatsapp" className="text-gray-900">WhatsApp Reminder</option>
+            <option value="none" className="text-gray-900">No Reminder</option>
           </select>
         </div>
       </div>
 
       <button
         type="submit"
-        className={`w-full px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg transition-colors duration-200 text-base sm:text-lg ${
+        className={`w-full px-6 py-4 rounded-xl transition-all duration-300 text-lg font-semibold ${
           formData.gender === 'male' && formData.branch === 'kphb'
-            ? 'bg-gray-400 cursor-not-allowed'
-            : 'bg-blue-600 text-white hover:bg-blue-700 font-medium'
+            ? 'bg-gray-300 cursor-not-allowed text-gray-500'
+            : 'bg-blue-600 text-white hover:bg-blue-700 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-600/25'
         }`}
         disabled={isSubmitting || (formData.gender === 'male' && formData.branch === 'kphb')}
       >
@@ -362,11 +379,13 @@ export default function BookingForm() {
       </button>
 
       {status && (
-        <p className={`text-center p-2.5 sm:p-3 rounded text-sm sm:text-base ${
-          status.includes("success") ? "bg-green-50 text-green-700" : "bg-red-50 text-red-700"
+        <div className={`text-center p-4 rounded-xl text-base ${
+          status.includes("success") 
+            ? "bg-green-50 text-green-700 border border-green-200" 
+            : "bg-red-50 text-red-700 border border-red-200"
         }`}>
           {status}
-        </p>
+        </div>
       )}
     </form>
   );

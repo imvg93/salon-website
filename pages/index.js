@@ -13,28 +13,29 @@ export default function Home() {
       <Head>
         <title>Catwalk Salons - Salons & Beauty Training </title>
         <meta name="description" content="Professional beauty training and salon services" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/png" href="/favicon.png" />
       </Head>
 
       {/* Social Media Floating Buttons */}
-      <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+      <div className="fixed bottom-4 right-4 flex flex-col gap-3 z-50">
         <a
           href="https://wa.me/+919959673434?text=Hi%20book%20an%20appointment"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 flex items-center justify-center"
-          style={{ width: '60px', height: '60px' }}
+          className="bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 flex items-center justify-center social-button"
+          style={{ width: '50px', height: '50px' }}
         >
-          <FaWhatsapp className="w-8 h-8" />
+          <FaWhatsapp className="w-6 h-6" />
         </a>
         <a
           href="https://www.instagram.com/catwalk__salon/"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white p-4 rounded-full shadow-lg hover:opacity-90 transition-all duration-300 flex items-center justify-center"
-          style={{ width: '60px', height: '60px' }}
+          className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white p-3 rounded-full shadow-lg hover:opacity-90 transition-all duration-300 flex items-center justify-center social-button"
+          style={{ width: '50px', height: '50px' }}
         >
-          <FaInstagram className="w-8 h-8" />
+          <FaInstagram className="w-6 h-6" />
         </a>
       </div>
 

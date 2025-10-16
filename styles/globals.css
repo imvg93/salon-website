@@ -236,3 +236,85 @@ header p {
   outline: none;
   box-shadow: 0 0 5px rgba(91, 47, 148, 0.7);
 }
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .our-story {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .what-we-do {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .why-choose-us {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .timeline {
+    margin: 0 8px;
+    padding-left: 20px;
+  }
+
+  .timeline .item:before {
+    left: -8px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .max-w-6xl {
+    padding: 0 12px;
+  }
+
+  .call-to-action a {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
+
+/* Social media buttons mobile optimization */
+@media (max-width: 768px) {
+  .social-button {
+    width: 45px !important;
+    height: 45px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-button {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
