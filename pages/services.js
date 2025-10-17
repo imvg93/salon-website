@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import styles from '../styles/Services.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -470,7 +471,108 @@ const Services = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <>
+      <Head>
+        {/* ==============================================
+             SERVICES PAGE - SEO META TAGS
+             ============================================== */}
+
+        {/* Basic Meta Tags */}
+        <title>Beauty Services - Hair, Makeup, Facials & Packages | Catwalk Salons</title>
+        <meta name="description" content="Comprehensive beauty services at Catwalk Salons: bridal packages, hair styling, makeup, facials, nail art, memberships & more. Professional beauty treatments in Hyderabad." />
+        <meta name="keywords" content="beauty services Hyderabad, bridal packages, hair styling services, makeup artist, facial treatments, nail art, beauty packages, salon memberships, hair coloring, keratin treatment" />
+        <meta name="author" content="Catwalk Salons" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.catwalksalons.com/services" />
+
+        {/* Open Graph Tags (Facebook/LinkedIn) */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Beauty Services - Hair, Makeup, Facials & Packages | Catwalk Salons" />
+        <meta property="og:description" content="Discover our complete range of beauty services: bridal packages, hair styling, professional makeup, facials, nail art & exclusive memberships. Book your appointment today!" />
+        <meta property="og:url" content="https://www.catwalksalons.com/services" />
+        <meta property="og:image" content="https://www.catwalksalons.com/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Catwalk Salons" />
+
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Beauty Services - Hair, Makeup, Facials & Packages | Catwalk Salons" />
+        <meta name="twitter:description" content="Discover our complete range of beauty services: bridal packages, hair styling, professional makeup, facials, nail art & exclusive memberships. Book your appointment today!" />
+        <meta name="twitter:image" content="https://www.catwalksalons.com/og-image.jpg" />
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.catwalksalons.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://www.catwalksalons.com/services"
+              }
+            ]
+          })
+        }} />
+
+        {/* Service Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Beauty Services",
+            "description": "Comprehensive beauty services including hair styling, makeup, facials, nail art, and beauty packages",
+            "provider": {
+              "@type": "BeautySalon",
+              "name": "Catwalk Salons",
+              "url": "https://www.catwalksalons.com"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Hyderabad"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Beauty Services Catalog",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Bridal Package",
+                    "description": "Complete bridal package with pre-bridal treatments, hair styling, and makeup"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Hair Styling & Coloring",
+                    "description": "Professional hair cutting, styling, coloring, and treatments"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Facial Treatments",
+                    "description": "Premium facial treatments including hydrafacial, gold facial, and anti-aging facials"
+                  }
+                }
+              ]
+            }
+          })
+        }} />
+      </Head>
+      <div className={styles.container}>
       <div className="absolute top-4 left-4 z-10">
         <Link href="/">
           <button className="bg-[#f85555] text-white px-6 py-2 rounded-lg hover:bg-[#121212] transition shadow-md flex items-center gap-2">
@@ -605,6 +707,7 @@ const Services = () => {
         </Link>
       </div>
     </div>
+    </>
   );
 };
 

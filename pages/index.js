@@ -11,10 +11,113 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Catwalk Salons - Salons & Beauty Training </title>
-        <meta name="description" content="Professional beauty training and salon services" />
+        {/* ==============================================
+             HOME PAGE - SEO META TAGS
+             ============================================== */}
+
+        {/* Basic Meta Tags */}
+        <title>Catwalk Salons - Premium Beauty Salon & Training Academy in Hyderabad</title>
+        <meta name="description" content="Catwalk Salons offers premium beauty services, professional hair styling, makeup, facials & beauty training courses in Hyderabad. Book appointments at KPHB & Nizampet locations." />
+        <meta name="keywords" content="beauty salon Hyderabad, hair salon KPHB, makeup artist Hyderabad, beauty training academy, professional hair styling, bridal makeup, facial treatments, nail art, beauty courses" />
+        <meta name="author" content="Catwalk Salons" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.catwalksalons.com/" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/png" href="/favicon.png" />
+
+        {/* Open Graph Tags (Facebook/LinkedIn) */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Catwalk Salons - Premium Beauty Salon & Training Academy in Hyderabad" />
+        <meta property="og:description" content="Transform your beauty with Catwalk Salons. Premium hair styling, makeup, facials & professional beauty training courses in Hyderabad. Book your appointment today!" />
+        <meta property="og:url" content="https://www.catwalksalons.com/" />
+        <meta property="og:image" content="https://www.catwalksalons.com/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Catwalk Salons" />
+        <meta property="og:locale" content="en_IN" />
+
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Catwalk Salons - Premium Beauty Salon & Training Academy in Hyderabad" />
+        <meta name="twitter:description" content="Transform your beauty with Catwalk Salons. Premium hair styling, makeup, facials & professional beauty training courses in Hyderabad. Book your appointment today!" />
+        <meta name="twitter:image" content="https://www.catwalksalons.com/og-image.jpg" />
+
+        {/* Additional SEO Tags */}
+        <meta name="geo.region" content="IN-TG" />
+        <meta name="geo.placename" content="Hyderabad" />
+        <meta name="geo.position" content="17.3850;78.4867" />
+        <meta name="ICBM" content="17.3850, 78.4867" />
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.catwalksalons.com/"
+              }
+            ]
+          })
+        }} />
+
+        {/* Local Business Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BeautySalon",
+            "name": "Catwalk Salons",
+            "description": "Premium beauty salon and training academy offering hair styling, makeup, facials, and professional beauty courses in Hyderabad",
+            "url": "https://www.catwalksalons.com",
+            "telephone": "+91-99596-73434",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "JNTU to Hitech city road, Near MIG Bus-stop",
+              "addressLocality": "KPHB",
+              "addressRegion": "Telangana",
+              "postalCode": "500072",
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "17.3850",
+              "longitude": "78.4867"
+            },
+            "openingHours": "Mo-Su 10:00-20:00",
+            "priceRange": "$$",
+            "servedArea": "Hyderabad",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Beauty Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Hair Styling & Coloring"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Bridal Makeup & Styling"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Facial Treatments"
+                  }
+                }
+              ]
+            }
+          })
+        }} />
       </Head>
 
       {/* Social Media Floating Buttons */}

@@ -1,0 +1,21 @@
+OG IMAGE PLACEHOLDER
+
+You need to create an og-image.jpg file with dimensions 1200x630 pixels.
+
+This image will be used for social media sharing (Facebook, Twitter, LinkedIn).
+
+Recommended content for the image:
+- Catwalk Salons logo
+- Tagline: "Premium Beauty Salon & Training Academy"
+- Background: Professional salon imagery
+- Location: Hyderabad (KPHB & Nizampet)
+- Contact: +91-99596-73434
+
+Design tips:
+- Use high-quality images
+- Keep text readable and centered
+- Use brand colors (#f85555)
+- Ensure it looks good when cropped for different platforms
+
+Once created, save as: og-image.jpg in the /public folder
+

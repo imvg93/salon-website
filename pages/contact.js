@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Head from 'next/head'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { FaArrowLeft, FaPhone, FaMapMarkerAlt, FaClock, FaEnvelope } from 'react-icons/fa'
@@ -66,7 +67,98 @@ export default function Contact() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FFF9F0]">
+    <>
+      <Head>
+        {/* ==============================================
+             CONTACT/BOOKING PAGE - SEO META TAGS
+             ============================================== */}
+
+        {/* Basic Meta Tags */}
+        <title>Contact Catwalk Salons - Book Appointment | KPHB & Nizampet Locations</title>
+        <meta name="description" content="Contact Catwalk Salons for appointments & inquiries. Two convenient locations in Hyderabad: KPHB & Nizampet. Call +91-99596-73434 or book online. Open 10 AM - 8 PM daily." />
+        <meta name="keywords" content="contact catwalk salons, book appointment Hyderabad, salon KPHB, salon Nizampet, beauty salon contact, appointment booking, salon phone number" />
+        <meta name="author" content="Catwalk Salons" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.catwalksalons.com/contact" />
+
+        {/* Open Graph Tags (Facebook/LinkedIn) */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Contact Catwalk Salons - Book Appointment | KPHB & Nizampet Locations" />
+        <meta property="og:description" content="Get in touch with Catwalk Salons. Two convenient locations in Hyderabad with easy appointment booking. Call +91-99596-73434 or visit our KPHB & Nizampet branches." />
+        <meta property="og:url" content="https://www.catwalksalons.com/contact" />
+        <meta property="og:image" content="https://www.catwalksalons.com/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Catwalk Salons" />
+
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact Catwalk Salons - Book Appointment | KPHB & Nizampet Locations" />
+        <meta name="twitter:description" content="Get in touch with Catwalk Salons. Two convenient locations in Hyderabad with easy appointment booking. Call +91-99596-73434 or visit our KPHB & Nizampet branches." />
+        <meta name="twitter:image" content="https://www.catwalksalons.com/og-image.jpg" />
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.catwalksalons.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Contact",
+                "item": "https://www.catwalksalons.com/contact"
+              }
+            ]
+          })
+        }} />
+
+        {/* Contact Page Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact Catwalk Salons",
+            "description": "Contact information and appointment booking for Catwalk Salons locations in Hyderabad",
+            "url": "https://www.catwalksalons.com/contact",
+            "mainEntity": {
+              "@type": "BeautySalon",
+              "name": "Catwalk Salons",
+              "telephone": "+91-99596-73434",
+              "url": "https://www.catwalksalons.com",
+              "address": [
+                {
+                  "@type": "PostalAddress",
+                  "name": "Catwalk Ladies Salon - KPHB",
+                  "streetAddress": "JNTU to Hitech city road, Near MIG Bus-stop",
+                  "addressLocality": "KPHB",
+                  "addressRegion": "Telangana",
+                  "postalCode": "500072",
+                  "addressCountry": "IN"
+                },
+                {
+                  "@type": "PostalAddress",
+                  "name": "Catwalk Unisex Salon - Nizampet",
+                  "streetAddress": "Sreekrutha Sadan, Beside HP petrol",
+                  "addressLocality": "Nizampet",
+                  "addressRegion": "Telangana",
+                  "postalCode": "500090",
+                  "addressCountry": "IN"
+                }
+              ],
+              "openingHours": "Mo-Su 10:00-20:00",
+              "priceRange": "$$"
+            }
+          })
+        }} />
+      </Head>
+      <main className="min-h-screen bg-[#FFF9F0]">
       {/* Back Button */}
       <div className="absolute top-4 left-4 z-10">
         <Link href="/" className="flex items-center space-x-2">
@@ -305,5 +397,6 @@ export default function Contact() {
         </div>
       </section>
     </main>
+    </>
   )
 } 

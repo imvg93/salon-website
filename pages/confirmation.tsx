@@ -1,6 +1,7 @@
 // pages/confirmation.tsx
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function ConfirmationPage() {
   const [appointmentDetails, setAppointmentDetails] = useState<any>(null);
@@ -32,7 +33,35 @@ export default function ConfirmationPage() {
   });
 
   return (
-    <main className="min-h-screen bg-gray-100 p-6 overflow-x-hidden">
+    <>
+      <Head>
+        {/* ==============================================
+             CONFIRMATION PAGE - SEO META TAGS
+             ============================================== */}
+
+        {/* Basic Meta Tags */}
+        <title>Appointment Confirmed - Catwalk Salons | Thank You for Booking</title>
+        <meta name="description" content="Your appointment at Catwalk Salons has been confirmed! Thank you for booking with us. We look forward to providing you with excellent beauty services." />
+        <meta name="keywords" content="appointment confirmed catwalk salons, beauty appointment booking, salon confirmation, beauty services appointment" />
+        <meta name="author" content="Catwalk Salons" />
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="canonical" href="https://www.catwalksalons.com/confirmation" />
+
+        {/* Open Graph Tags (Facebook/LinkedIn) */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Appointment Confirmed - Catwalk Salons | Thank You for Booking" />
+        <meta property="og:description" content="Your appointment at Catwalk Salons has been confirmed! Thank you for booking with us. We look forward to providing you with excellent beauty services." />
+        <meta property="og:url" content="https://www.catwalksalons.com/confirmation" />
+        <meta property="og:image" content="https://www.catwalksalons.com/og-image.jpg" />
+        <meta property="og:site_name" content="Catwalk Salons" />
+
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Appointment Confirmed - Catwalk Salons | Thank You for Booking" />
+        <meta name="twitter:description" content="Your appointment at Catwalk Salons has been confirmed! Thank you for booking with us. We look forward to providing you with excellent beauty services." />
+        <meta name="twitter:image" content="https://www.catwalksalons.com/og-image.jpg" />
+      </Head>
+      <main className="min-h-screen bg-gray-100 p-6 overflow-x-hidden">
       <div className="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-lg w-full">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold mb-2">Appointment Confirmed!</h2>
@@ -100,6 +129,7 @@ export default function ConfirmationPage() {
           </Link>
         </div>
       </div>
-    </main>
+      </main>
+    </>
   );
 }

@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
@@ -85,7 +86,107 @@ export default function Training() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FFF9F0]">
+    <>
+      <Head>
+        {/* ==============================================
+             TRAINING/COURSES PAGE - SEO META TAGS
+             ============================================== */}
+
+        {/* Basic Meta Tags */}
+        <title>Beauty Training Courses - Professional Hair & Makeup Academy | Catwalk</title>
+        <meta name="description" content="Professional beauty training courses at Catwalk Academy: Hair styling, makeup artistry, beauty therapy & complete beauty courses. Get certified & start your beauty career in Hyderabad." />
+        <meta name="keywords" content="beauty training courses Hyderabad, hair styling course, makeup artist training, beauty therapy course, professional beauty academy, certified beauty courses, beauty career training" />
+        <meta name="author" content="Catwalk Salons" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.catwalksalons.com/training" />
+
+        {/* Open Graph Tags (Facebook/LinkedIn) */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Beauty Training Courses - Professional Hair & Makeup Academy | Catwalk" />
+        <meta property="og:description" content="Transform your passion into a career with Catwalk Academy's professional beauty training courses. Expert instructors, certification, and flexible schedules. Enroll today!" />
+        <meta property="og:url" content="https://www.catwalksalons.com/training" />
+        <meta property="og:image" content="https://www.catwalksalons.com/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Catwalk Salons" />
+
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Beauty Training Courses - Professional Hair & Makeup Academy | Catwalk" />
+        <meta name="twitter:description" content="Transform your passion into a career with Catwalk Academy's professional beauty training courses. Expert instructors, certification, and flexible schedules. Enroll today!" />
+        <meta name="twitter:image" content="https://www.catwalksalons.com/og-image.jpg" />
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.catwalksalons.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Training Courses",
+                "item": "https://www.catwalksalons.com/training"
+              }
+            ]
+          })
+        }} />
+
+        {/* Educational Organization Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            "name": "Catwalk Academy",
+            "description": "Professional beauty training academy offering certified courses in hair styling, makeup artistry, and beauty therapy",
+            "url": "https://www.catwalksalons.com/training",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "JNTU to Hitech city road, Near MIG Bus-stop",
+              "addressLocality": "KPHB",
+              "addressRegion": "Telangana",
+              "postalCode": "500072",
+              "addressCountry": "IN"
+            },
+            "telephone": "+91-99596-73434",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Beauty Training Courses",
+              "itemListElement": [
+                {
+                  "@type": "Course",
+                  "name": "Professional Hair Styling Course",
+                  "description": "3-month comprehensive hair styling course covering cutting, coloring, and styling techniques",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Catwalk Academy"
+                  },
+                  "courseMode": "In-person",
+                  "educationalLevel": "Professional"
+                },
+                {
+                  "@type": "Course",
+                  "name": "Professional Makeup Artistry Course",
+                  "description": "4-month makeup artistry course covering bridal, party, and special occasion makeup",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Catwalk Academy"
+                  },
+                  "courseMode": "In-person",
+                  "educationalLevel": "Professional"
+                }
+              ]
+            }
+          })
+        }} />
+      </Head>
+      <main className="min-h-screen bg-[#FFF9F0]">
       {/* Back Button */}
       <div className="absolute top-4 left-4 z-10">
         <Link href="/" className="flex items-center space-x-2">
@@ -270,5 +371,6 @@ export default function Training() {
         </div>
       )}
     </main>
+    </>
   )
 }

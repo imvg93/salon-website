@@ -1,5 +1,6 @@
 import BookingForm from '../components/BookingForm';
 import Link from 'next/link';
+import Head from 'next/head';
 import { FaArrowLeft, FaMapMarkerAlt, FaClock, FaPhone, FaWhatsapp } from 'react-icons/fa';
 import { useState } from 'react';
 
@@ -7,7 +8,59 @@ const Appointments = () => {
   const [showLocationInfo, setShowLocationInfo] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <>
+      <Head>
+        {/* ==============================================
+             APPOINTMENTS PAGE - SEO META TAGS
+             ============================================== */}
+
+        {/* Basic Meta Tags */}
+        <title>Book Appointment - Catwalk Salons | KPHB & Nizampet Locations</title>
+        <meta name="description" content="Book your beauty appointment at Catwalk Salons. Professional hair styling, makeup, facials & beauty training. Two convenient locations in Hyderabad: KPHB & Nizampet. Call +91-99596-73434" />
+        <meta name="keywords" content="book appointment catwalk salons, beauty salon appointment Hyderabad, hair salon booking KPHB, makeup appointment Nizampet, beauty services booking, salon appointment online" />
+        <meta name="author" content="Catwalk Salons" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.catwalksalons.com/appointments" />
+
+        {/* Open Graph Tags (Facebook/LinkedIn) */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Book Appointment - Catwalk Salons | KPHB & Nizampet Locations" />
+        <meta property="og:description" content="Schedule your beauty appointment at Catwalk Salons. Professional services at two convenient Hyderabad locations. Book online or call +91-99596-73434" />
+        <meta property="og:url" content="https://www.catwalksalons.com/appointments" />
+        <meta property="og:image" content="https://www.catwalksalons.com/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Catwalk Salons" />
+
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Book Appointment - Catwalk Salons | KPHB & Nizampet Locations" />
+        <meta name="twitter:description" content="Schedule your beauty appointment at Catwalk Salons. Professional services at two convenient Hyderabad locations. Book online or call +91-99596-73434" />
+        <meta name="twitter:image" content="https://www.catwalksalons.com/og-image.jpg" />
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.catwalksalons.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Book Appointment",
+                "item": "https://www.catwalksalons.com/appointments"
+              }
+            ]
+          })
+        }} />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Mobile Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm lg:hidden">
         <div className="flex items-center justify-between px-4 py-4">
@@ -286,7 +339,8 @@ const Appointments = () => {
           </a>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

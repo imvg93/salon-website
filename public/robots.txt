@@ -1,12 +1,19 @@
-# Allow all crawlers
+# Robots.txt for Catwalk Salon Website
+# This file tells search engines how to crawl your site
+
+# Allow all search engines to crawl all content
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://your-domain.com/sitemap.xml
-
-# Disallow admin and API routes
+# Block access to API routes (these are for functionality, not SEO)
 Disallow: /api/
-Disallow: /admin/
+
+# Block access to internal Next.js files
 Disallow: /_next/
-Disallow: /static/ 
+Disallow: /_error
+
+# Sitemap location - Update this URL with your actual domain
+Sitemap: https://www.catwalksalons.com/sitemap.xml
+
+# Additional sitemaps if you have any (uncomment if needed)
+# Sitemap: https://wwww.catwalksalons.com/sitemap-images.xml

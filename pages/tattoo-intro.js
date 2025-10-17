@@ -1,11 +1,64 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
 import { FaArrowLeft, FaInstagram, FaWhatsapp, FaMapMarkerAlt, FaRegClock } from 'react-icons/fa';
 
 const TattooIntro = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#2c1810] to-[#1a0f0a] text-white">
+    <>
+      <Head>
+        {/* ==============================================
+             TATTOO INTRO PAGE - SEO META TAGS
+             ============================================== */}
+
+        {/* Basic Meta Tags */}
+        <title>Professional Tattoo Services - Custom Designs & Artwork | Catwalk Salons</title>
+        <meta name="description" content="Professional tattoo services at Catwalk Salons. Custom tattoo designs, cover-up tattoos, and touch-ups by expert artists. Book your tattoo appointment in Hyderabad." />
+        <meta name="keywords" content="tattoo services Hyderabad, custom tattoo designs, tattoo artist Hyderabad, cover-up tattoos, tattoo touch-ups, professional tattoo studio, tattoo appointment booking" />
+        <meta name="author" content="Catwalk Salons" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.catwalksalons.com/tattoo-intro" />
+
+        {/* Open Graph Tags (Facebook/LinkedIn) */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Professional Tattoo Services - Custom Designs & Artwork | Catwalk Salons" />
+        <meta property="og:description" content="Expert tattoo artists at Catwalk Salons offer custom designs, cover-ups, and professional touch-ups. Book your tattoo appointment in Hyderabad today." />
+        <meta property="og:url" content="https://www.catwalksalons.com/tattoo-intro" />
+        <meta property="og:image" content="https://www.catwalksalons.com/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Catwalk Salons" />
+
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Professional Tattoo Services - Custom Designs & Artwork | Catwalk Salons" />
+        <meta name="twitter:description" content="Expert tattoo artists at Catwalk Salons offer custom designs, cover-ups, and professional touch-ups. Book your tattoo appointment in Hyderabad today." />
+        <meta name="twitter:image" content="https://www.catwalksalons.com/og-image.jpg" />
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.catwalksalons.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tattoo Services",
+                "item": "https://www.catwalksalons.com/tattoo-intro"
+              }
+            ]
+          })
+        }} />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-b from-[#2c1810] to-[#1a0f0a] text-white">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#2c1810]/90 backdrop-blur-md border-b border-[#3d2318]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -204,7 +257,8 @@ const TattooIntro = () => {
           </motion.div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 
