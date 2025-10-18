@@ -19,3 +19,4 @@ Design tips:
 
 Once created, save as: og-image.jpg in the /public folder
 
+

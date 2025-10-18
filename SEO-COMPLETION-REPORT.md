@@ -175,3 +175,4 @@ With these SEO improvements:
 
 *For questions or additional SEO work, refer to SEO-STRATEGY.md*
 
+
